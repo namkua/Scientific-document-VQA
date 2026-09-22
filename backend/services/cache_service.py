@@ -27,7 +27,7 @@ def _get_qdrant_client() -> QdrantClient:
     except (ValueError, TypeError):
         port = 6333
 
-    return QdrantClient(host=host, port=port)
+    return QdrantClient(host=host, port=port, check_compatibility=False)
 
 qdrant_client = _get_qdrant_client()
 

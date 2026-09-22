@@ -21,7 +21,7 @@ COLLECTION_NAME = os.getenv("COLLECTION_NAME", "scientific_documents")
 
 qdrant_host = os.getenv("QDRANT_HOST", "localhost")
 qdrant_port = int(os.getenv("QDRANT_PORT", 6333))
-qdrant_client = QdrantClient(host=qdrant_host, port=qdrant_port)
+qdrant_client = QdrantClient(host=qdrant_host, port=qdrant_port, check_compatibility=False)
 
 # Best-practice Score Diffusion parameters from empirical experiments
 DIFFUSION_FORWARD = 0.3   # Propagate score to next page (P + 1)

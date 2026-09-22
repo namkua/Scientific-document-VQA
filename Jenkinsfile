@@ -56,11 +56,12 @@ pipeline {
         stage('Unit Tests (Backend)') {
             steps {
                 sh """
-                    docker run --rm --user root -v \${WORKSPACE}/backend:/app -w /app ${DOCKERHUB_USER}/${BACKEND_IMAGE}:${IMAGE_TAG} \\
-                        pytest tests/unit/ -v
+                    docker run --rm ${DOCKERHUB_USER}/${BACKEND_IMAGE}:${IMAGE_TAG} \\
+                        python -m pytest backend/tests/unit/ -v
                 """
             }
         }
+
         
         stage('Push to DockerHub') {
             when {
@@ -87,13 +88,19 @@ pipeline {
                 script {
                     sh """
                         # Prepare kubeconfig for containerized Jenkins connecting to Minikube
-                        if [ -f /var/jenkins_home/.kube/config ] || [ -f /root/.kube/config ]; then
-                            mkdir -p \${HOME}/.kube
-                            cp -f /var/jenkins_home/.kube/config \${HOME}/.kube/config 2>/dev/null || cp -f /root/.kube/config \${HOME}/.kube/config
-                            sed -i 's/127.0.0.1/host.docker.internal/g' \${HOME}/.kube/config
-                            sed -i '/certificate-authority/d' \${HOME}/.kube/config
+                        export KUBECONFIG=/tmp/kubeconfig
+                        if [ -f /var/jenkins_home/.kube/config ]; then
+                            cp -f /var/jenkins_home/.kube/config /tmp/kubeconfig
+                        elif [ -f /root/.kube/config ]; then
+                            cp -f /root/.kube/config /tmp/kubeconfig
+                        fi
+
+                        if [ -f /tmp/kubeconfig ]; then
+                            sed -i 's/127.0.0.1/host.docker.internal/g' /tmp/kubeconfig
+                            sed -i '/certificate-authority/d' /tmp/kubeconfig
                             kubectl config set-cluster minikube --insecure-skip-tls-verify=true 2>/dev/null || true
                         fi
+
 
                         echo "Deploying Backend to Kubernetes (${K8S_NAMESPACE})..."
                         helm upgrade --install backend ./helm-chart/backend \\

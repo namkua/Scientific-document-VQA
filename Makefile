@@ -161,7 +161,6 @@ destroy: ## Clean up old default namespace releases and uninstall all namespaces
 	-helm uninstall backend -n default
 	-helm uninstall litellm -n default
 	-helm uninstall minio -n default
-	-helm uninstall redis -n default
 	-helm uninstall postgresql -n default
 	-helm uninstall monitoring -n default
 	@echo "Uninstalling releases from separated namespaces..."
