@@ -2,6 +2,8 @@
 
 A production-ready, enterprise-grade multimodal document understanding and Visual Question Answering (VQA) system built on modern Cloud-Native and MLOps architectures. Fully deployed on **Kubernetes (Minikube / Production Cluster)** using **Helm**, featuring an intelligent **LiteLLM Gateway**, **Qwen-VL / vLLM** vision-language model serving, **ColQwen2.5 & BM25 Hybrid Embedder Microservice**, **Qdrant Vector Database (MaxSim Multi-Vector, Neighbor Score Diffusion & Two-Tier Semantic Cache)**, **MinIO Object Storage**, full-stack observability with **Prometheus/Grafana/ELK (Elasticsearch, Logstash, Kibana, Filebeat)**, and an end-to-end automated **CI/CD pipeline with Jenkins**.
 
+![System Architecture](./images/pipeline.png)
+
 ---
 
 ## Table of Contents
@@ -32,11 +34,12 @@ A production-ready, enterprise-grade multimodal document understanding and Visua
 
 ## Architecture Overview
 
-![System Architecture](./images/pipeline-2.png)
 
 ### 1. Ingress & Frontend Layer
 * **NGINX Ingress Controller**: Manages external routing into the Kubernetes cluster via `vqa.127.0.0.1.nip.io` or `vqa.local`. Configured with `proxy-body-size: 50m` to support high-resolution document uploads.
 * **Streamlit Frontend (`:8501`)**: Interactive web UI supporting multi-image upload, multi-turn chat memory, and real-time Server-Sent Events (SSE) token streaming.
+
+![Streamlit Web UI](./images/UI.png)
 
 ### 2. Multimodal RAG & Embedder Layer
 * **ColQwen Embedder Microservice (`:8000`)**:
@@ -50,8 +53,13 @@ A production-ready, enterprise-grade multimodal document understanding and Visua
   * **Neighbor Score Diffusion**: Propagates relevance scores to adjacent pages ($P-1$ with $\alpha_{backward}=0.05$ and $P+1$ with $\alpha_{forward}=0.30$) to capture cross-page continuity.
   * Returns Top-3 most relevant textbook pages (`top_k=3`).
 
+![Qdrant Vector Database](./images/Qdrant.png)
+
 ### 3. Backend & Storage Layer
 * **FastAPI Backend (`:8000`)**: Core business logic, deduplication engine, MinIO SDK integration, and async SQLAlchemy database operations.
+
+![FastAPI Backend Documentation](./images/fastapi.png)
+
 * **Two-Tier Qdrant Semantic Caching Engine**:
   * **Anchor Image Hashing (`compute_image_hash`)**: Computes a SHA-256 hash over raw image bytes to ensure absolute cache isolation between distinct document figures and maintain context consistency across multi-turn dialogues.
   * **Tier 1 (Instant Exact Match, <1ms)**: Checks Qdrant payload index (`image_hash` + `query_normalized`) without requiring any vector compute.
@@ -61,6 +69,9 @@ A production-ready, enterprise-grade multimodal document understanding and Visua
   * Downscales all images to maximum 1280px (JPEG quality 85) to preserve vision token budget.
   * Automatically retains user-uploaded anchor figures while replacing ephemeral past RAG pages.
   * Enforces a hard cap of **maximum 4 images per prompt** to strictly adhere to vLLM's multi-modal limit.
+* **MinIO Object Storage (`:9000`, `:9001`)**: High-performance S3-compatible object storage storing scientific document figures, rendered textbook pages, and uploaded user images.
+
+![MinIO Object Storage](./images/Minio.png)
 
 ### 4. AI Gateway & Model Serving Layer
 * **LiteLLM Gateway (`:4000`)**: Centralized OpenAI-compatible proxy featuring:
@@ -68,12 +79,16 @@ A production-ready, enterprise-grade multimodal document understanding and Visua
   * **Intelligent Fallback**: Automatic instant failover to **Groq Cloud Vision API** (`groq/qwen/qwen3.6-27b`) upon connection errors or timeout thresholds.
   * **Prompt Caching & Tracing**: Automatic prompt token caching and telemetry exported to **Langfuse Cloud**.
 
+![Langfuse Tracing & Telemetry](./images/langfuse.png)
+
 ### 5. Observability & Logging Layer
 
 * **Prometheus (`:9090`) & Grafana (`:3000`)**: Full-stack cluster and application telemetry monitoring:
   * **Kubernetes Infrastructure Metrics (cAdvisor / Kubelet / Node Exporter)**: Real-time CPU, RAM, and GPU memory utilization per pod (`backend`, `embedder`, `vllm`, `qdrant`, `litellm`), Network I/O (image payloads and Server-Sent Event streaming throughput), and pod restart counts / lifecycle health.
   * **AI Gateway & Application Metrics (LiteLLM / FastAPI)**: Request throughput (RPS), HTTP status code distribution (2xx, 4xx, 5xx), AI response latencies, and token consumption analytics.
   * **Persistence & Storage Metrics**: PostgreSQL connection pool saturation, active transactions, MinIO bucket storage consumption, and Qdrant collection vectors count.
+
+![Grafana Monitoring Dashboard](./images/monitoring.png)
 
 * **Alertmanager (`:9093`)**: Automated multi-tier alerting routed via **Discord Webhooks**:
   * **Pod & Service Availability**: Triggers alerts on `CrashLoopBackOff`, unhealthy probe failures (`KubePodNotReady`), or unresponsive services (`TargetDown`).
@@ -90,12 +105,17 @@ A production-ready, enterprise-grade multimodal document understanding and Visua
     * **Failover Events**: Warnings on primary vLLM failures and automatic transitions to Groq Cloud Vision fallback.
     * **Database & Access Logs**: SQLAlchemy ORM query execution times, transaction commits/rollbacks, and HTTP request access logs.
 
+![Kibana Log Management](./images/elk.png)
+
 ### 6. CI/CD Automation Pipeline
 * **Jenkins Container (`:8082`)**: Automated pipeline handling:
   * Parallel Docker image builds for `backend` and `frontend`.
   * Unit test execution inside isolated containers (`pytest backend/tests/unit/ -v`).
   * Docker image publishing to **Docker Hub** (`namkua/vqa-backend`, `namkua/vqa-frontend`).
   * Continuous Deployment executing `helm upgrade --install` with automated rollout verification (`kubectl rollout status`).
+
+![Jenkins CI/CD Pipeline](./images/jenkins.png)
+
 
 ---
 
@@ -140,7 +160,6 @@ Scientific document VQA/
 │   ├── nginx-ingress/              # NGINX Ingress Controller chart
 │   ├── postgresql/                 # PostgreSQL Database chart
 │   ├── qdrant/                     # Qdrant Vector Database & Semantic Cache chart
-│   ├── redis/                      # Redis chart (optional LiteLLM state cache)
 │   ├── monitoring/                 # Kube-Prometheus-Stack custom values
 │   └── ELK/                        # Elasticsearch, Logstash, Kibana, Filebeat
 ├── notebooks/                      # Data exploration, research & evaluation notebooks
