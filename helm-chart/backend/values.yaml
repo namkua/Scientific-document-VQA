@@ -1,0 +1,28 @@
+replicaCount: 1
+
+image:
+  repository: vqa-backend
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "latest"
+
+service:
+  type: ClusterIP
+  port: 8000
+
+env:
+  minioBucketName: "vqa-images"
+  minioUrl: "minio:9000"
+  minioPublicEndpoint: ""
+  litellmBaseUrl: "http://litellm:4000/v1"
+
+# Reference to external secrets for sensitive data
+secretName: "vqa-secrets"
+
+resources:
+  limits:
+    cpu: 500m
+    memory: 512Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi

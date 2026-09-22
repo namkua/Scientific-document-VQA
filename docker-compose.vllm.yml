@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  vllm:
+    image: vllm/vllm-openai:latest
+    container_name: vqa-vllm
+    # runtime: nvidia is required for docker < 19.03, but modern docker uses deploy.resources
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      - HUGGING_FACE_HUB_TOKEN=${HF_TOKEN}
+    volumes:
+      # Cache downloaded models on the host machine to avoid re-downloading
+      - ~/.cache/huggingface:/root/.cache/huggingface
+    command: >
+      --model namkua/qwen3-vl-8b-merged-16bit-SciVQA --served-model-name qwen-vl-vqa --host 0.0.0.0 --port 8080 --api-key ${VLLM_API_KEY} --quantization bitsandbytes --limit-mm-per-prompt '{"image": 4}' --enable-prefix-caching --max-model-len 8192 --trust-remote-code
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [ gpu ]

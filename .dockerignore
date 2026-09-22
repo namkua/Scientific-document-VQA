@@ -1,0 +1,49 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.egg-info
+dist
+build
+.pytest_cache
+htmlcov
+.coverage
+venv
+.venv
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data & Logs
+*.parquet
+*.log
+airflow/logs
+
+# Docs (not needed in container)
+docs/
+notebooks/
+*.ipynb
+README.md
+project_structure.txt
+
+# CI/CD (not needed in container)
+Jenkinsfile
+.github/
+
+# Terraform (not needed in container)
+terraform/
+
+# Infrastructure configs (not needed in container)
+helm/
+monitoring/

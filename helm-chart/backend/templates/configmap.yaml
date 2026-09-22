@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-config
+data:
+  MINIO_BUCKET_NAME: {{ .Values.env.minioBucketName | quote }}
+  MINIO_URL: {{ .Values.env.minioUrl | quote }}
+  MINIO_PUBLIC_ENDPOINT: {{ .Values.env.minioPublicEndpoint | quote }}
+  LITELLM_BASE_URL: {{ .Values.env.litellmBaseUrl | quote }}

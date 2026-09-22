@@ -1,0 +1,12 @@
+[server]
+port = 8501
+address = "0.0.0.0"
+headless = true
+enableCORS = false
+enableXsrfProtection = false
+enableWebsocketCompression = false
+
+[browser]
+gatherUsageStats = false
+serverAddress = "127.0.0.1.nip.io"
+serverPort = 80

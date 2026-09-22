@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  embedder:
+    build:
+      context: ./embedder
+      dockerfile: Dockerfile
+    image: vqa-embedder:latest
+    container_name: vqa-embedder
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      - EMBEDDER_API_KEY=${EMBEDDER_API_KEY}
+      - HF_TOKEN=${HF_TOKEN}
+    volumes:
+      # Cache downloaded models on the host machine to avoid re-downloading
+      - ~/.cache/huggingface:/root/.cache/huggingface
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [ gpu ]

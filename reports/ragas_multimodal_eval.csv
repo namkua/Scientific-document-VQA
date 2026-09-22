@@ -1,0 +1,493 @@
+﻿Total Evaluated Questions : 100
+Mean MultiModal Faithfulness: 0.9300 (Valid: 100/100)
+Mean MultiModal Relevance   : 0.8700 (Valid: 100/100)
+id,query,response,num_context_images,retrieved_images,multimodal_faithfulness,multimodal_relevance
+1,Đơn đồ thị vô hướng là gì? Nêu ví dụ mạng máy tính loại 1 được biểu diễn trong tài liệu.,"Đơn đồ thị vô hướng là một đồ thị không có hướng, nghĩa là các cạnh nối giữa các đỉnh không có chiều. Ví dụ về mạng máy tính loại 1 được biểu diễn trong tài liệu là mạng máy tính có các máy tính được nối với nhau bằng các kênh điện thoại, mỗi kênh điện thoại chỉ có thể truyền tín hiệu theo một chiều. Ví dụ, máy tính ở San Francisco có thể truy cập vào máy tính ở Los Angeles, nhưng máy tính ở Los Angeles không thể truy cập vào máy tính ở San Francisco.",3,"['data/eval_page_images/page_7.png', 'data/eval_page_images/page_8.png', 'data/eval_page_images/page_9.png']",0.0,0.0
+2,Đa đồ thị vô hướng và cạnh bội được định nghĩa như thế nào trong tài liệu?,"Đa đồ thị vô hướng là một loại đồ thị có thể có nhiều cạnh nối giữa hai đỉnh. Cạnh bội là một cạnh nối hai đỉnh cùng một cặp đỉnh.  Ví dụ, trong hình 1.2, có hai cạnh nối giữa Chicago và Denver, đây là cạnh bội.  Đa đồ thị vô hướng được định nghĩa là G = <V, E>, trong đó V là tập các đỉnh, E là tập các cặp không có thứ tự gồm hai phần tử khác nhau của V gọi là tập các cạnh.  e1, e2 ∈ E được gọi là cạnh bội nếu chúng cùng tương ứng với một cặp đỉnh.",3,"['data/eval_page_images/page_8.png', 'data/eval_page_images/page_9.png', 'data/eval_page_images/page_10.png']",1.0,1.0
+3,Thế nào là giả đồ thị vô hướng và khuyên?,"Giả đồ thị vô hướng là một loại đồ thị vô hướng, trong đó có thể có nhiều hơn một cạnh nối giữa hai đỉnh. Điều này có nghĩa là giữa hai đỉnh có thể có nhiều hơn một đường kết nối, nhưng không có hướng. Ví dụ, trong hình 1.3, giữa San Francisco và Los Angeles có hai cạnh nối, nhưng không có hướng. Giả đồ thị vô hướng được sử dụng để mô tả các mạng lưới, trong đó có thể có nhiều hơn một đường kết nối giữa hai nút, nhưng không có hướng.",3,"['data/eval_page_images/page_8.png', 'data/eval_page_images/page_9.png', 'data/eval_page_images/page_10.png']",1.0,1.0
+4,Định nghĩa đơn đồ thị có hướng và cung.,Đơn đồ thị có hướng là một đồ thị có hướng mà không có cạnh bội. Cung là một cạnh có hướng trong đồ thị có hướng.  Cung được biểu diễn bằng một mũi tên chỉ hướng từ đỉnh đầu đến đỉnh cuối.,3,"['data/eval_page_images/page_9.png', 'data/eval_page_images/page_13.png', 'data/eval_page_images/page_14.png']",1.0,1.0
+5,Đa đồ thị có hướng và cung lặp được định nghĩa ra sao?,"Đa đồ thị có hướng là một đồ thị có hướng cho phép có nhiều cạnh nối giữa hai đỉnh. Cung lặp là một cạnh nối từ một đỉnh đến chính nó.  Định nghĩa 5 cho biết: Đa đồ thị có hướng G = <V, E> bao gồm V là tập đỉnh, E là cặp có thứ tự gồm hai phần tử của V được gọi là các cung. Hai cung e1, e2 tương ứng với cùng một cặp đỉnh được gọi là cung lặp.",3,"['data/eval_page_images/page_9.png', 'data/eval_page_images/page_10.png', 'data/eval_page_images/page_14.png']",1.0,1.0
+6,"Hãy tóm tắt Bảng 1 phân biệt 5 loại đồ thị: Đơn vô hướng, Đa vô hướng, Giả vô hướng, Đơn có hướng, Đa có hướng về đặc điểm cạnh, cạnh bội, khuyên.","Bảng 1 phân biệt 5 loại đồ thị: Đơn vô hướng, Đa vô hướng, Giả vô hướng, Đơn có hướng, Đa có hướng về đặc điểm cạnh, cạnh bội, khuyên như sau:
+
+1. **Đơn đồ thị vô hướng**: Cạnh vô hướng, không có cạnh bội, không có khuyên.
+2. **Đa đồ thị vô hướng**: Cạnh vô hướng, có cạnh bội, không có khuyên.
+3. **Giả đồ thị vô hướng**: Cạnh vô hướng, có cạnh bội, có khuyên.
+4. **Đơn đồ thị có hướng**: Cạnh có hướng, không có cạnh bội, không có khuyên.
+5. **Đa đồ thị có hướng**: Cạnh có hướng, có cạnh bội, có khuyên.",3,"['data/eval_page_images/page_8.png', 'data/eval_page_images/page_9.png', 'data/eval_page_images/page_10.png']",1.0,1.0
+7,Bậc của đỉnh trong đồ thị vô hướng là gì? Thế nào là đỉnh cô lập và đỉnh treo?,"Bậc của đỉnh trong đồ thị vô hướng là số cạnh liên thuộc với đỉnh đó. Ví dụ, trong Hình 1.6, đỉnh a có bậc 2, đỉnh b có bậc 4, đỉnh c có bậc 4, đỉnh d có bậc 1, đỉnh e có bậc 3, đỉnh f có bậc 4, đỉnh g có bậc 0.
+
+Đỉnh cô lập là đỉnh có bậc 0, tức là đỉnh không liên thuộc với bất kỳ cạnh nào. Trong Hình 1.6, đỉnh g là đỉnh cô lập.
+
+Đỉnh treo là đỉnh có bậc 1, tức là đỉnh chỉ liên thuộc với một cạnh. Trong Hình 1.6, đỉnh d là đỉnh treo.",3,"['data/eval_page_images/page_10.png', 'data/eval_page_images/page_12.png', 'data/eval_page_images/page_20.png']",1.0,1.0
+8,"Dựa vào Hình 1.6, hãy xác định bậc của các đỉnh a, b, c, d, e, f, g và chỉ ra đỉnh cô lập, đỉnh treo.","Bậc của các đỉnh trong Hình 1.6 được xác định như sau:
+
+* deg(a) = 2
+* deg(b) = deg(c) = deg(f) = 4
+* deg(e) = 3
+* deg(d) = 1
+* deg(g) = 0
+
+Đỉnh cô lập là đỉnh có bậc bằng 0, tức là đỉnh g. Đỉnh treo là đỉnh có bậc bằng 1, tức là đỉnh d.",3,"['data/eval_page_images/page_10.png', 'data/eval_page_images/page_11.png', 'data/eval_page_images/page_13.png']",1.0,1.0
+9,Phát biểu Định lý 1 và hệ quả về tổng bậc của các đỉnh trong đồ thị vô hướng.,"**Định lý 1:**  Giả sử G = <V, E> là đồ thị vô hướng với m cạnh. Khi đó 2m = Σ deg(v).
+
+**Hệ quả:** Trong đồ thị vô hướng G=<V, E>, số các đỉnh bậc lẻ là một số chẵn.",3,"['data/eval_page_images/page_10.png', 'data/eval_page_images/page_73.png', 'data/eval_page_images/page_74.png']",1.0,1.0
+10,"Định nghĩa đường đi, chu trình và đường đi đơn, chu trình đơn trên đồ thị vô hướng.","Trong đồ thị vô hướng, đường đi là một dãy các đỉnh, trong đó mỗi đỉnh được nối với đỉnh kế tiếp bởi một cạnh. Chu trình là một đường đi mà đỉnh đầu và đỉnh cuối trùng nhau. Đường đi đơn là một đường đi mà không có cạnh nào lặp lại. Chu trình đơn là một chu trình mà không có cạnh nào lặp lại.",3,"['data/eval_page_images/page_11.png', 'data/eval_page_images/page_14.png', 'data/eval_page_images/page_68.png']",1.0,1.0
+11,"Trong Hình 1.7, hãy nêu ví dụ về một đường đi đơn độ dài 4, một chu trình độ dài 4, và một đường đi không đơn.","Trong Hình 1.7, ta có thể nêu ví dụ về:
+
+* **Đường đi đơn độ dài 4:**  a, d, e, b
+* **Chu trình độ dài 4:**  b, c, f, e, b
+* **Đường đi không đơn:**  a, b, e, d, a, b",3,"['data/eval_page_images/page_11.png', 'data/eval_page_images/page_68.png', 'data/eval_page_images/page_107.png']",1.0,1.0
+12,Thế nào là đồ thị vô hướng liên thông và thành phần liên thông?,"Đồ thị vô hướng liên thông là đồ thị mà bất kỳ hai đỉnh nào trong đồ thị cũng có thể được nối với nhau bằng một đường đi. Nói cách khác, đồ thị vô hướng liên thông là đồ thị mà không có đỉnh nào bị cô lập. 
+
+Thành phần liên thông của đồ thị là một tập hợp các đỉnh mà bất kỳ hai đỉnh nào trong tập hợp đó cũng có thể được nối với nhau bằng một đường đi. Nói cách khác, thành phần liên thông là một phần của đồ thị mà các đỉnh trong đó có thể được truy cập từ bất kỳ đỉnh nào trong tập hợp đó. 
+
+Ví dụ, trong hình 1.8, đồ thị vô hướng G có 3 thành phần liên thông: 
+- Thành phần liên thông thứ nhất gồm các đỉnh 1, 2, 3, 4, 6, 7. 
+- Thành phần liên thông thứ hai gồm các đỉnh 5, 8, 9, 10. 
+- Thành phần liên thông thứ ba gồm các đỉnh 11, 12, 13.",3,"['data/eval_page_images/page_12.png', 'data/eval_page_images/page_13.png', 'data/eval_page_images/page_41.png']",1.0,1.0
+13,Thế nào là cạnh cầu và đỉnh trụ của đồ thị vô hướng? Nêu định nghĩa.,"Trong đồ thị vô hướng, cạnh cầu là cạnh mà khi loại bỏ nó, số thành phần liên thông của đồ thị sẽ tăng lên. Ví dụ, trong Hình 1.8, cạnh (5, 9) là cạnh cầu vì khi loại bỏ nó, số thành phần liên thông của đồ thị tăng từ 3 lên 4. Đỉnh trụ là đỉnh mà khi loại bỏ nó cùng với các cạnh nối với nó, số thành phần liên thông của đồ thị sẽ tăng lên. Ví dụ, trong Hình 1.8, đỉnh 5 là đỉnh trụ vì khi loại bỏ nó cùng với các cạnh nối với nó, số thành phần liên thông của đồ thị tăng từ 3 lên 4.",3,"['data/eval_page_images/page_10.png', 'data/eval_page_images/page_12.png', 'data/eval_page_images/page_13.png']",1.0,1.0
+14,"Trong đồ thị vô hướng Hình 1.8, có bao nhiêu thành phần liên thông và các cạnh cầu, đỉnh trụ là những cạnh/đỉnh nào?","Đồ thị vô hướng Hình 1.8 có 3 thành phần liên thông. Các thành phần liên thông lần lượt gồm các đỉnh sau:
+
+* Thành phần liên thông thứ nhất: 1, 2, 3, 4, 6, 7
+* Thành phần liên thông thứ hai: 5, 8, 9, 10
+* Thành phần liên thông thứ ba: 11, 12, 13
+
+Các cạnh cầu trong đồ thị là: (5, 9), (5, 10), (6, 7), (8, 10). Các đỉnh trụ trong đồ thị là: 5, 6, 10.",3,"['data/eval_page_images/page_12.png', 'data/eval_page_images/page_41.png', 'data/eval_page_images/page_56.png']",1.0,1.0
+15,Bán bậc vào deg-(v) và bán bậc ra deg+(v) của đỉnh trên đồ thị có hướng là gì? Nêu Định lý 1 chương 1.,"Bán bậc vào deg-(v) của đỉnh v trên đồ thị có hướng là số cung của đồ thị đi vào v. Bán bậc ra deg+(v) của đỉnh v trên đồ thị có hướng là số cung của đồ thị đi ra khỏi v. 
+
+Định lý 1 chương 1: Giả sử G = <V, E> là đồ thị có hướng. Khi đó, tổng bán bậc vào của tất cả các đỉnh bằng tổng bán bậc ra của tất cả các đỉnh và bằng số cạnh của đồ thị.",3,"['data/eval_page_images/page_10.png', 'data/eval_page_images/page_13.png', 'data/eval_page_images/page_14.png']",1.0,1.0
+16,Phân biệt đồ thị có hướng liên thông mạnh và liên thông yếu.,"Đồ thị có hướng liên thông mạnh là đồ thị có hướng mà giữa hai đỉnh bất kỳ đều có đường đi từ đỉnh này đến đỉnh kia. Nói cách khác, đồ thị có hướng liên thông mạnh là đồ thị có hướng mà mọi đỉnh đều có thể truy cập được từ mọi đỉnh khác. Ví dụ, trong hình 1.10, đồ thị G1 là đồ thị có hướng liên thông mạnh vì từ đỉnh a, ta có thể đi đến tất cả các đỉnh khác (b, c, d, e). Tuy nhiên, đồ thị G2 không phải là đồ thị có hướng liên thông mạnh vì từ đỉnh a, ta không thể đi đến đỉnh c. 
+
+Đồ thị có hướng liên thông yếu là đồ thị có hướng mà giữa hai đỉnh bất kỳ, ít nhất một trong hai đỉnh đó có đường đi đến đỉnh kia. Nói cách khác, đồ thị có hướng liên thông yếu là đồ thị có hướng mà mọi đỉnh đều có thể truy cập được từ ít nhất một đỉnh khác. Ví dụ, trong hình 1.10, đồ thị G2 là đồ thị có hướng liên thông yếu vì từ đỉnh a, ta có thể đi đến đỉnh b, c, d, e. Tuy nhiên, từ đỉnh c, ta không thể đi đến đỉnh a.",3,"['data/eval_page_images/page_14.png', 'data/eval_page_images/page_16.png', 'data/eval_page_images/page_49.png']",1.0,1.0
+17,Đồ thị định chiều được là gì và điều kiện cần và đủ để đồ thị vô hướng liên thông định chiều được?,"Đồ thị định chiều được là một đồ thị có hướng, trong đó mỗi cạnh được gán một chiều. Điều kiện cần và đủ để đồ thị vô hướng liên thông định chiều được là đồ thị đó phải là đồ thị Euler. Điều này có nghĩa là đồ thị phải có chu trình Euler, tức là một chu trình đi qua tất cả các cạnh của đồ thị đúng một lần.",3,"['data/eval_page_images/page_62.png', 'data/eval_page_images/page_68.png', 'data/eval_page_images/page_69.png']",0.0,0.0
+18,"Nêu định nghĩa 4 dạng đồ thị đặc biệt: đồ thị đầy đủ Kn, đồ thị vòng Cn, đồ thị bánh xe Wn, đồ thị hai phía.","Đồ thị đầy đủ Kn: Là đồ thị vô hướng có n đỉnh, trong đó mỗi đỉnh được nối với tất cả các đỉnh còn lại. Ví dụ, đồ thị đầy đủ K3 có 3 đỉnh và mỗi đỉnh được nối với 2 đỉnh còn lại. 
+Đồ thị vòng Cn: Là đồ thị vô hướng có n đỉnh, trong đó các đỉnh được nối theo vòng tròn. Ví dụ, đồ thị vòng C3 có 3 đỉnh và mỗi đỉnh được nối với 2 đỉnh kề bên. 
+Đồ thị bánh xe Wn: Là đồ thị vô hướng có n đỉnh, trong đó n-1 đỉnh được nối theo vòng tròn và đỉnh còn lại được nối với tất cả các đỉnh trong vòng tròn. Ví dụ, đồ thị bánh xe W3 có 4 đỉnh, 3 đỉnh được nối theo vòng tròn và đỉnh còn lại được nối với 3 đỉnh trong vòng tròn. 
+Đồ thị hai phía: Là đồ thị vô hướng có tập đỉnh V được chia thành hai tập con X và Y, trong đó mỗi cạnh của đồ thị chỉ có dạng (x, y), trong đó x thuộc X và y thuộc Y. Ví dụ, đồ thị hai phía K2,3 có 5 đỉnh, 2 đỉnh thuộc X và 3 đỉnh thuộc Y, mỗi cạnh của đồ thị chỉ có dạng (x, y), trong đó x thuộc X và y thuộc Y.",3,"['data/eval_page_images/page_9.png', 'data/eval_page_images/page_15.png', 'data/eval_page_images/page_16.png']",1.0,1.0
+19,Ma trận kề của đồ thị đơn vô hướng được định nghĩa như thế nào?,"Ma trận kề của đồ thị đơn vô hướng là một ma trận vuông kích thước n x n, trong đó n là số đỉnh của đồ thị. Mỗi phần tử a[i][j] của ma trận kề được xác định như sau:
+
+* Nếu có cạnh nối giữa đỉnh i và đỉnh j, thì a[i][j] = 1.
+* Nếu không có cạnh nối giữa đỉnh i và đỉnh j, thì a[i][j] = 0.
+
+Ví dụ, trong hình 1.1, ma trận kề của đồ thị đơn vô hướng được biểu diễn như sau:
+
+|  | San Francisco | Chicago | Denver | Los Angeles | Detroit | New York | Washington |
+|---|---|---|---|---|---|---|---|
+| San Francisco | 0 | 1 | 1 | 1 | 0 | 0 | 0 |
+| Chicago | 1 | 0 | 1 | 1 | 1 | 1 | 0 |
+| Denver | 1 | 1 | 0 | 1 | 0 | 1 | 1 |
+| Los Angeles | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+| Detroit | 0 | 1 | 0 | 0 | 0 | 1 | 1 |
+| New York | 0 | 1 | 1 | 0 | 1 | 0 | 1 |
+| Washington | 0 | 0 | 1 | 0 | 1 | 1 | 0 |
+
+Ma trận kề là một cách biểu diễn đồ thị đơn giản và hiệu quả, đặc biệt là khi đồ thị có số lượng đỉnh không quá lớn.",3,"['data/eval_page_images/page_7.png', 'data/eval_page_images/page_9.png', 'data/eval_page_images/page_29.png']",1.0,1.0
+20,Nêu các tính chất cơ bản của ma trận kề đối với đồ thị vô hướng.,"Ma trận kề của đồ thị vô hướng có các tính chất cơ bản sau:
+
+a) Tổng các phần tử của ma trận bằng hai lần số cạnh:  ∑∑a<sub>ij</sub> = 2m (m là số cạnh của đồ thị).
+
+b) Tổng các phần tử của hàng u là bậc của đỉnh u: deg(u) = ∑a<sub>ij</sub>. Ví dụ với ma trận kề biểu diễn đồ thị Hình 2.1, tổng các phần tử của hàng 1 là bậc của đỉnh 1, vì vậy deg(1)=2; tổng các phần tử của hàng 2 là bậc của đỉnh 2, vì vậy deg(2)=3.
+
+c) Tổng các phần tử của cột u là bậc của đỉnh u: deg(u) = ∑a<sub>ju</sub>. Ví dụ với ma trận kề biểu diễn đồ thị Hình 2.1, tổng các phần tử của cột 1 là bậc của đỉnh 1, vì vậy deg(1)=2; tổng các phần tử của cột 2 là bậc của đỉnh 2, vì vậy deg(2)=3.
+
+d) Nếu ký hiệu a<sub>ij</sub><sup>p</sup>, i, j = 1, 2, ..., n là các phần tử của ma trận. Khi đó, A<sup>p</sup> = A.A...A (p lần); a<sub>ij</sub><sup>p</sup>, i, j = 1, 2, ..., n, cho ta số đường đi khác nhau từ đỉnh i đến đỉnh j qua p-1 đỉnh trung gian.",3,"['data/eval_page_images/page_18.png', 'data/eval_page_images/page_19.png', 'data/eval_page_images/page_74.png']",1.0,1.0
+21,Ma trận kề của đồ thị có hướng có những tính chất gì khác so với đồ thị vô hướng?,"Ma trận kề của đồ thị đơn vô hướng là một ma trận vuông kích thước n x n, trong đó n là số đỉnh của đồ thị. Mỗi phần tử a[i][j] của ma trận kề được xác định như sau:
+
+* Nếu có cạnh nối giữa đỉnh i và đỉnh j, thì a[i][j] = 1.
+* Nếu không có cạnh nối giữa đỉnh i và đỉnh j, thì a[i][j] = 0.
+
+Ví dụ, trong hình 1.1, ma trận kề của đồ thị đơn vô hướng được biểu diễn như sau:
+
+|  | San Francisco | Chicago | Denver | Los Angeles | Detroit | New York | Washington |
+|---|---|---|---|---|---|---|---|
+| San Francisco | 0 | 1 | 1 | 1 | 0 | 0 | 0 |
+| Chicago | 1 | 0 | 1 | 1 | 1 | 1 | 0 |
+| Denver | 1 | 1 | 0 | 1 | 0 | 1 | 1 |
+| Los Angeles | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+| Detroit | 0 | 1 | 0 | 0 | 0 | 1 | 1 |
+| New York | 0 | 1 | 1 | 0 | 1 | 0 | 1 |
+| Washington | 0 | 0 | 1 | 0 | 1 | 1 | 0 |
+
+Ma trận kề là một cách biểu diễn đồ thị đơn giản và hiệu quả, đặc biệt là khi đồ thị có số lượng đỉnh không quá lớn.",3,"['data/eval_page_images/page_7.png', 'data/eval_page_images/page_9.png', 'data/eval_page_images/page_29.png']",1.0,0.0
+22,Ma trận trọng số của đồ thị được định nghĩa như thế nào và các giá trị theta thường nhận là gì?,"Ma trận trọng số của đồ thị được định nghĩa là một ma trận biểu diễn trọng số của các cạnh trong đồ thị. Mỗi phần tử của ma trận này đại diện cho trọng số của cạnh nối giữa hai đỉnh tương ứng. Các giá trị theta thường nhận là 0, ∞, -∞ tùy theo từng tình huống cụ thể của thuật toán.",3,"['data/eval_page_images/page_19.png', 'data/eval_page_images/page_20.png', 'data/eval_page_images/page_44.png']",1.0,1.0
+23,Nêu ưu điểm và nhược điểm của việc biểu diễn đồ thị bằng ma trận kề.,"Biểu diễn đồ thị bằng ma trận kề là một phương pháp phổ biến và hiệu quả trong việc lưu trữ và xử lý đồ thị. Tuy nhiên, nó cũng có một số ưu điểm và nhược điểm cần được cân nhắc.
+
+**Ưu điểm:**
+
+* **Dễ dàng kiểm tra xem hai đỉnh có kề nhau hay không:** Việc kiểm tra xem hai đỉnh có kề nhau hay không chỉ cần truy cập vào một phần tử của ma trận kề. Điều này rất nhanh chóng và hiệu quả.
+* **Dễ dàng tính toán bậc của một đỉnh:** Bậc của một đỉnh được tính bằng tổng các phần tử trong hàng hoặc cột tương ứng của ma trận kề. Việc tính toán bậc của một đỉnh cũng rất đơn giản.
+* **Dễ dàng thực hiện các thao tác trên đồ thị:** Các thao tác như thêm hoặc xóa cạnh, tìm đường đi ngắn nhất, tìm chu trình, v.v. đều có thể được thực hiện một cách dễ dàng bằng cách thao tác trực tiếp trên ma trận kề.
+
+**Nhược điểm:**
+
+* **Tiêu tốn bộ nhớ:** Ma trận kề yêu cầu một lượng bộ nhớ lớn, đặc biệt là khi đồ thị có nhiều đỉnh. Ví dụ, một đồ thị có n đỉnh sẽ cần n^2 đơn vị bộ nhớ để lưu trữ ma trận kề.
+* **Không phù hợp với đồ thị thưa:** Ma trận kề không phù hợp với đồ thị thưa, tức là đồ thị có số cạnh ít hơn số đỉnh. Trong trường hợp này, ma trận kề sẽ chứa nhiều phần tử 0, dẫn đến lãng phí bộ nhớ.
+* **Khó khăn trong việc tìm kiếm đường đi:** Việc tìm kiếm đường đi trong đồ thị bằng ma trận kề có thể phức tạp hơn so với các phương pháp khác, đặc biệt là khi đồ thị có nhiều đỉnh.",3,"['data/eval_page_images/page_3.png', 'data/eval_page_images/page_17.png', 'data/eval_page_images/page_20.png']",1.0,1.0
+24,Quy ước khuôn dạng lưu trữ ma trận kề trong file dothi.in như thế nào?,"Quy ước khuôn dạng lưu trữ ma trận kề trong file dothi.in như sau:
+
+- Dòng đầu tiên ghi lại số đỉnh của đồ thị.
+- N dòng kế tiếp ghi lại ma trận kề của đồ thị. Hai phần tử khác nhau của ma trận kề được viết cách nhau một vài khoảng trống.
+
+Ví dụ ma trận kề gồm 6 đỉnh của Hình 2.1 được tổ chức trong file dothi.in như sau:
+
+dothi.in
+5
+0 1 0 0 0 0
+1 0 1 1 1 0
+1 1 0 1 0 0
+0 1 0 1 0 1
+0 0 1 1 0 0",3,"['data/eval_page_images/page_20.png', 'data/eval_page_images/page_26.png', 'data/eval_page_images/page_35.png']",1.0,1.0
+25,Khi nào nên biểu diễn đồ thị bằng danh sách cạnh (cung) và ưu nhược điểm là gì?,"Biểu diễn đồ thị bằng danh sách cạnh (cung) là một phương pháp phù hợp khi số cạnh của đồ thị nhỏ hơn hoặc bằng 6 lần số đỉnh (m ≤ 6n). Trong trường hợp này, phương pháp này tiết kiệm không gian nhớ và thuận lợi cho các thuật toán chỉ quan tâm đến các cạnh của đồ thị. Tuy nhiên, khi cần duyệt các đỉnh kề với một đỉnh u, ta phải duyệt tất cả các cạnh của đồ thị, điều này làm cho thuật toán có chi phí tính toán cao.",3,"['data/eval_page_images/page_20.png', 'data/eval_page_images/page_22.png', 'data/eval_page_images/page_23.png']",1.0,1.0
+26,"Trong danh sách cạnh của đồ thị vô hướng, người ta quy ước thứ tự các đỉnh đầu và cuối như thế nào?","Trong danh sách cạnh của đồ thị vô hướng, người ta quy ước thứ tự các đỉnh đầu và cuối sao cho đỉnh đầu nhỏ hơn đỉnh cuối. Điều này được thể hiện rõ ràng trong phần ""Tính chất danh sách cạnh của đồ thị vô hướng"" ở hình 2.4. Ví dụ, cạnh nối đỉnh 1 và 2 được ghi là (1, 2) chứ không phải (2, 1).",3,"['data/eval_page_images/page_21.png', 'data/eval_page_images/page_22.png', 'data/eval_page_images/page_27.png']",1.0,1.0
+27,Làm thế nào để tính bán bậc ra deg+(u) và bán bậc vào deg-(u) từ danh sách cạnh của đồ thị có hướng?,"Để tính bán bậc ra deg+(u) và bán bậc vào deg-(u) từ danh sách cạnh của đồ thị có hướng, bạn cần thực hiện các bước sau:
+
+1. **Xác định danh sách cạnh**: Đầu tiên, bạn cần xác định danh sách cạnh của đồ thị có hướng. Danh sách cạnh là một tập hợp các cặp đỉnh (u, v) biểu thị một cạnh có hướng từ đỉnh u đến đỉnh v.
+
+2. **Tính bán bậc ra deg+(u)**: Để tính bán bậc ra deg+(u) của đỉnh u, bạn cần đếm số lượng cạnh có hướng đi ra từ đỉnh u. Nói cách khác, bạn cần đếm số lượng cạnh (u, v) trong danh sách cạnh.
+
+3. **Tính bán bậc vào deg-(u)**: Để tính bán bậc vào deg-(u) của đỉnh u, bạn cần đếm số lượng cạnh có hướng đi vào đỉnh u. Nói cách khác, bạn cần đếm số lượng cạnh (v, u) trong danh sách cạnh.
+
+Ví dụ, trong hình 1.9, danh sách cạnh của đồ thị có hướng G là {(a, b), (b, c), (c, d), (d, a), (e, a), (e, d)}. Để tính bán bậc ra deg+(a) của đỉnh a, bạn cần đếm số lượng cạnh có hướng đi ra từ đỉnh a. Trong danh sách cạnh, có 2 cạnh có hướng đi ra từ đỉnh a là (a, b) và (e, a). Do đó, deg+(a) = 2. Để tính bán bậc vào deg-(a) của đỉnh a, bạn cần đếm số lượng cạnh có hướng đi vào đỉnh a. Trong danh sách cạnh, có 1 cạnh có hướng đi vào đỉnh a là (d, a). Do đó, deg-(a) = 1.",3,"['data/eval_page_images/page_13.png', 'data/eval_page_images/page_69.png', 'data/eval_page_images/page_70.png']",1.0,1.0
+28,Quy ước khuôn dạng lưu trữ danh sách cạnh trong file dữ liệu là gì?,"Quy ước khuôn dạng lưu trữ danh sách cạnh trong file dữ liệu là: 
+- Dòng đầu tiên ghi lại số N, M tương ứng với số đỉnh và số cạnh của đồ thị. Hai số được viết cách nhau một vài khoảng trống.
+- M dòng kế tiếp, mỗi dòng ghi lại một cạnh của đồ thị, đỉnh đầu và đỉnh cuối mỗi cạnh được viết cách nhau một vài khoảng trống.",3,"['data/eval_page_images/page_20.png', 'data/eval_page_images/page_22.png', 'data/eval_page_images/page_27.png']",1.0,1.0
+29,Cấu trúc dữ liệu struct Edge trong C biểu diễn cạnh đồ thị gồm những thành viên nào?,"Cấu trúc dữ liệu struct Edge trong C biểu diễn cạnh đồ thị gồm hai thành viên chính:
+
+* **dau:** Biến kiểu int, lưu trữ số thứ tự của đỉnh đầu của cạnh.
+* **cuoi:** Biến kiểu int, lưu trữ số thứ tự của đỉnh cuối của cạnh.
+
+Ngoài ra, trong một số trường hợp, cấu trúc Edge có thể bao gồm thêm một thành viên **trongso** để lưu trữ trọng số của cạnh.",3,"['data/eval_page_images/page_17.png', 'data/eval_page_images/page_23.png', 'data/eval_page_images/page_24.png']",1.0,1.0
+30,Danh sách kề Ke(u) của đỉnh u được định nghĩa như thế nào và nêu ưu điểm của nó?,"Danh sách kề Ke(u) của đỉnh u được định nghĩa là tập hợp các đỉnh kề với đỉnh u, tức là các đỉnh v sao cho cạnh (u, v) thuộc tập hợp cạnh E của đồ thị. Nói cách khác, Ke(u) là tập hợp các đỉnh v mà có cạnh nối trực tiếp với đỉnh u. 
+
+Ưu điểm của danh sách kề là:
+- Dễ dàng duyệt tất cả các đỉnh của một danh sách kề.
+- Dễ dàng duyệt các cạnh của đồ thị trong mỗi danh sách kề.
+- Tối ưu về phương pháp biểu diễn.",3,"['data/eval_page_images/page_24.png', 'data/eval_page_images/page_25.png', 'data/eval_page_images/page_57.png']",1.0,1.0
+31,Cách biểu diễn danh sách kề dựa vào mảng A[] và mảng vị trí VT[] được thực hiện như thế nào?,"Để biểu diễn danh sách kề dựa vào mảng A[] và mảng vị trí VT[], ta sử dụng mảng A[] để lưu trữ danh sách kề của các đỉnh. Mảng A[] được chia thành n đoạn, mỗi đoạn tương ứng với danh sách kề của một đỉnh. Mảng VT[] được sử dụng để lưu trữ vị trí bắt đầu và kết thúc của mỗi đoạn trong mảng A[]. Ví dụ, trong hình 2.8, mảng A[] gồm 18 phần tử, được chia thành 6 đoạn. Mảng VT[] gồm 6 phần tử, mỗi phần tử là vị trí bắt đầu của một đoạn trong mảng A[]. Ví dụ, VT[1] = 0, VT[2] = 2, VT[3] = 6, VT[4] = 9, VT[5] = 13, VT[6] = 16. Như vậy, danh sách kề của đỉnh 1 là A[1], A[2], A[3], A[4], A[5], A[6].",3,"['data/eval_page_images/page_24.png', 'data/eval_page_images/page_25.png', 'data/eval_page_images/page_26.png']",1.0,1.0
+32,Biểu diễn danh sách kề bằng danh sách liên kết List(u) hoạt động như thế nào?,"Biểu diễn danh sách kề bằng danh sách liên kết List(u) hoạt động như sau:
+
+1. **Cấu trúc dữ liệu:** Mỗi đỉnh u trong đồ thị được biểu diễn bởi một danh sách liên kết. Danh sách này chứa các đỉnh kề với u, được sắp xếp theo thứ tự. Mỗi phần tử trong danh sách liên kết là một nút, chứa thông tin về đỉnh kề và con trỏ trỏ đến nút tiếp theo trong danh sách.
+
+2. **Lưu trữ:** Danh sách kề được lưu trữ trong bộ nhớ dưới dạng các nút liên kết với nhau. Mỗi nút chứa thông tin về đỉnh kề và con trỏ trỏ đến nút tiếp theo trong danh sách.
+
+3. **Truy cập:** Để truy cập vào danh sách kề của một đỉnh u, ta cần tìm nút đại diện cho u trong danh sách liên kết. Sau đó, ta có thể duyệt qua các nút trong danh sách liên kết để truy cập vào các đỉnh kề với u.
+
+4. **Ví dụ:** Trong hình 2.8, danh sách kề của đỉnh 1 là List(1) = {2, 3}. Danh sách này được biểu diễn bằng danh sách liên kết List[1] với các nút chứa thông tin về đỉnh 2 và 3. Con trỏ của nút 2 trỏ đến nút 3, và con trỏ của nút 3 trỏ đến Null, biểu thị kết thúc danh sách.
+
+Biểu diễn danh sách kề bằng danh sách liên kết List(u) là một phương pháp hiệu quả để lưu trữ và truy cập thông tin về các đỉnh kề với một đỉnh trong đồ thị. Nó cho phép truy cập nhanh chóng vào các đỉnh kề và dễ dàng thực hiện các thao tác như thêm, xóa, sửa đổi các đỉnh kề.",3,"['data/eval_page_images/page_24.png', 'data/eval_page_images/page_25.png', 'data/eval_page_images/page_26.png']",1.0,1.0
+33,Quy ước khuôn dạng lưu trữ danh sách kề trong file dothi.in như thế nào?,"Quy ước khuôn dạng lưu trữ ma trận kề trong file dothi.in như sau:
+
+- Dòng đầu tiên ghi lại số đỉnh của đồ thị.
+- N dòng kế tiếp ghi lại ma trận kề của đồ thị. Hai phần tử khác nhau của ma trận kề được viết cách nhau một vài khoảng trống.
+
+Ví dụ ma trận kề gồm 6 đỉnh của Hình 2.1 được tổ chức trong file dothi.in như sau:
+
+dothi.in
+5
+0 1 0 0 0 0
+1 0 1 1 1 0
+1 1 0 1 0 0
+0 1 0 1 0 1
+0 0 1 1 0 0",3,"['data/eval_page_images/page_20.png', 'data/eval_page_images/page_26.png', 'data/eval_page_images/page_35.png']",1.0,0.0
+34,"Trong bài tập 5 trang 28, bàn cờ 8x8 được biểu diễn đồ thị như thế nào cho nước đi của quân vua?","Bài tập 5 trang 28 yêu cầu biểu diễn bàn cờ 8x8 dưới dạng đồ thị. Trong đồ thị này, mỗi ô trên bàn cờ được coi là một đỉnh. Hai đỉnh được coi là kề nhau nếu một quân vua có thể di chuyển từ ô này sang ô kia trong một nước đi. Ví dụ, ô 1 kề với ô 2, 9, 10, 11, 12, 18, 19, 20.  Để biểu diễn đồ thị này, ta có thể sử dụng ma trận kề, danh sách cạnh hoặc danh sách kề.  Ma trận kề là một ma trận vuông có kích thước 64x64, mỗi phần tử của ma trận là 1 nếu hai đỉnh tương ứng kề nhau, 0 nếu không. Danh sách cạnh là một danh sách các cặp đỉnh kề nhau. Danh sách kề là một danh sách các danh sách con, mỗi danh sách con chứa các đỉnh kề với một đỉnh nhất định.",3,"['data/eval_page_images/page_28.png', 'data/eval_page_images/page_29.png', 'data/eval_page_images/page_88.png']",1.0,1.0
+35,"Trong bài tập 6 trang 28, bàn cờ 8x8 biểu diễn cho nước đi quân mã thì ô 1 kề với những ô nào?","Bài tập 5 trang 28 yêu cầu biểu diễn bàn cờ 8x8 dưới dạng đồ thị. Trong đồ thị này, mỗi ô trên bàn cờ được coi là một đỉnh. Hai đỉnh được coi là kề nhau nếu một quân vua có thể di chuyển từ ô này sang ô kia trong một nước đi. Ví dụ, ô 1 kề với ô 2, 9, 10, 11, 12, 18, 19, 20.  Để biểu diễn đồ thị này, ta có thể sử dụng ma trận kề, danh sách cạnh hoặc danh sách kề.  Ma trận kề là một ma trận vuông có kích thước 64x64, mỗi phần tử của ma trận là 1 nếu hai đỉnh tương ứng kề nhau, 0 nếu không. Danh sách cạnh là một danh sách các cặp đỉnh kề nhau. Danh sách kề là một danh sách các danh sách con, mỗi danh sách con chứa các đỉnh kề với một đỉnh nhất định.",3,"['data/eval_page_images/page_28.png', 'data/eval_page_images/page_29.png', 'data/eval_page_images/page_88.png']",1.0,0.0
+36,Nêu tư tưởng cơ bản của thuật toán tìm kiếm theo chiều sâu (DFS) và vai trò của mảng chuaxet[].,"Thuật toán tìm kiếm theo chiều sâu (DFS) là một thuật toán tìm kiếm đồ thị dựa trên nguyên tắc thăm dò theo chiều sâu. Nó bắt đầu từ một đỉnh nguồn và thăm tất cả các đỉnh có thể truy cập được từ đỉnh đó, sau đó quay lại đỉnh nguồn và tiếp tục thăm các đỉnh chưa được thăm. Quá trình này được lặp lại cho đến khi tất cả các đỉnh được thăm. Mảng chuaxet[] đóng vai trò quan trọng trong thuật toán DFS. Nó là một mảng boolean có n phần tử, mỗi phần tử tương ứng với một đỉnh trong đồ thị. Nếu chuaxet[i] = TRUE, điều đó có nghĩa là đỉnh i đã được thăm. Ngược lại, nếu chuaxet[i] = FALSE, điều đó có nghĩa là đỉnh i chưa được thăm. Mảng chuaxet[] giúp đảm bảo rằng mỗi đỉnh chỉ được thăm một lần, tránh việc lặp vô hạn.",3,"['data/eval_page_images/page_31.png', 'data/eval_page_images/page_37.png', 'data/eval_page_images/page_88.png']",1.0,1.0
+37,Trình bày mã giả thủ tục đệ qui của thuật toán DFS(u).,"Mã giả thủ tục đệ qui của thuật toán DFS(u) được trình bày như sau:
+
+**Thuật toán DFS(u): //u là đỉnh bắt đầu duyệt**
+Begin
+<Thăm đỉnh u>; //Duyệt đỉnh u
+chuaxet[u] := FALSE; //Xác nhận đỉnh u đã duyệt
+for each v eke(u) do //Lấy mỗi đỉnh v eKe(u).
+if (chuaxet[v]) then //Nếu đỉnh v chưa duyệt
+DFS(v); //Duyệt theo chiều sâu bắt từ đỉnh v
+EndIf;
+EndFor;
+End.",3,"['data/eval_page_images/page_31.png', 'data/eval_page_images/page_32.png', 'data/eval_page_images/page_35.png']",1.0,1.0
+38,Thuật toán DFS(u) khử đệ qui sử dụng cấu trúc dữ liệu gì và các bước thực hiện ra sao?,"Thuật toán DFS(u) khử đệ qui sử dụng cấu trúc dữ liệu ngăn xếp (stack) để lưu trữ các đỉnh cần duyệt. Các bước thực hiện thuật toán DFS(u) khử đệ qui như sau:
+
+**Bước 1 (Khởi tạo):**
+- Khởi tạo ngăn xếp stack là rỗng.
+- Đưa đỉnh u vào ngăn xếp.
+- Duyệt đỉnh u.
+- Gán giá trị False cho chuaxet[u] để xác nhận đỉnh u đã được duyệt.
+
+**Bước 2 (Lặp):**
+- Lặp lại cho đến khi ngăn xếp stack rỗng:
+    - Lấy đỉnh s ở đầu ngăn xếp.
+    - Lặp qua các đỉnh t kề với s:
+        - Nếu đỉnh t chưa được duyệt (chuaxet[t] = False):
+            - Duyệt đỉnh t.
+            - Gán giá trị False cho chuaxet[t] để xác nhận đỉnh t đã được duyệt.
+            - Đưa đỉnh s vào ngăn xếp.
+            - Đưa đỉnh t vào ngăn xếp.
+            - Thoát vòng lặp for.
+    - Thoát vòng lặp for.
+
+**Bước 3 (Trả lại kết quả):**
+- Trả về tập đỉnh đã duyệt.",3,"['data/eval_page_images/page_17.png', 'data/eval_page_images/page_31.png', 'data/eval_page_images/page_32.png']",1.0,1.0
+39,"Độ phức tạp thuật toán DFS(u) theo các dạng biểu diễn: ma trận kề, danh sách cạnh, danh sách kề là bao nhiêu?","Độ phức tạp thuật toán DFS(u) phụ thuộc vào phương pháp biểu diễn đồ thị. Độ phức tạp thuật toán DFS(u) theo các dạng biểu diễn đồ thị như sau:
+
+* Độ phức tạp thuật toán là O(n^2) trong trường hợp đồ thị biểu diễn dưới dạng ma trận kề, với n là số đỉnh của đồ thị.
+* Độ phức tạp thuật toán là O(n.m) trong trường hợp đồ thị biểu diễn dưới dạng danh sách cạnh, với n là số đỉnh của đồ thị, m là số cạnh của đồ thị.
+* Độ phức tạp thuật toán là O(max(n, m)) trong trường hợp đồ thị biểu diễn dưới dạng danh sách kề, với n là số đỉnh của đồ thị, m là số cạnh của đồ thị.",3,"['data/eval_page_images/page_3.png', 'data/eval_page_images/page_32.png', 'data/eval_page_images/page_105.png']",1.0,1.0
+40,Kết quả thứ tự duyệt đỉnh của thuật toán DFS(1) đệ qui trên đồ thị 13 đỉnh ở Hình 3.2 là gì?,"Kết quả thứ tự duyệt đỉnh của thuật toán DFS(1) đệ qui trên đồ thị 13 đỉnh ở Hình 3.2 là: 1, 2, 4, 3, 6, 7, 8, 10, 5, 9, 13, 11, 12.",3,"['data/eval_page_images/page_32.png', 'data/eval_page_images/page_33.png', 'data/eval_page_images/page_42.png']",1.0,1.0
+41,"Theo Bảng 3.1, kết quả duyệt DFS(1) bằng thuật toán Stack trên đồ thị 13 đỉnh cho ra thứ tự nào?","Theo Bảng 3.1, kết quả duyệt DFS(1) bằng thuật toán Stack trên đồ thị 13 đỉnh cho ra thứ tự là: 1, 2, 4, 3, 6, 7, 8, 10, 5, 9, 13, 11, 12.",3,"['data/eval_page_images/page_33.png', 'data/eval_page_images/page_34.png', 'data/eval_page_images/page_46.png']",1.0,1.0
+42,Khi nào ta có thể kết luận đồ thị vô hướng hoặc có hướng liên thông dựa vào kết quả của DFS(u)?,"Kết quả của DFS(u) cho phép ta kết luận đồ thị vô hướng hoặc có hướng liên thông dựa vào các điều kiện sau:
+
+* **Đồ thị vô hướng liên thông:** Nếu DFS(u) = V hoặc BFS(u) = V, nghĩa là tất cả các đỉnh của đồ thị đều được thăm dò, thì đồ thị vô hướng là liên thông.
+* **Đồ thị có hướng liên thông:** Nếu DFS(u) = V hoặc BFS(u) = V, nghĩa là tất cả các đỉnh của đồ thị đều được thăm dò, thì đồ thị có hướng là liên thông. Tuy nhiên, cần lưu ý rằng điều kiện này chỉ đảm bảo đồ thị có hướng là liên thông mạnh, tức là có đường đi từ bất kỳ đỉnh nào đến bất kỳ đỉnh nào khác. Để kiểm tra đồ thị có hướng liên thông yếu, cần kiểm tra xem có tồn tại đỉnh u thuộc V sao cho DFS(u) = V hoặc BFS(u) = V hay không.",3,"['data/eval_page_images/page_44.png', 'data/eval_page_images/page_49.png', 'data/eval_page_images/page_69.png']",1.0,1.0
+43,Nêu tư tưởng cơ bản của thuật toán tìm kiếm theo chiều rộng (BFS) và sự khác biệt chính so với DFS.,"Thuật toán tìm kiếm theo chiều sâu (DFS) là một thuật toán tìm kiếm đồ thị dựa trên nguyên tắc thăm dò theo chiều sâu. Nó bắt đầu từ một đỉnh nguồn và thăm tất cả các đỉnh có thể truy cập được từ đỉnh đó, sau đó quay lại đỉnh nguồn và tiếp tục thăm các đỉnh chưa được thăm. Quá trình này được lặp lại cho đến khi tất cả các đỉnh được thăm. Mảng chuaxet[] đóng vai trò quan trọng trong thuật toán DFS. Nó là một mảng boolean có n phần tử, mỗi phần tử tương ứng với một đỉnh trong đồ thị. Nếu chuaxet[i] = TRUE, điều đó có nghĩa là đỉnh i đã được thăm. Ngược lại, nếu chuaxet[i] = FALSE, điều đó có nghĩa là đỉnh i chưa được thăm. Mảng chuaxet[] giúp đảm bảo rằng mỗi đỉnh chỉ được thăm một lần, tránh việc lặp vô hạn.",3,"['data/eval_page_images/page_31.png', 'data/eval_page_images/page_37.png', 'data/eval_page_images/page_88.png']",1.0,0.0
+44,Trình bày thuật toán BFS(u) dạng mã giả.,"Mã giả thủ tục đệ qui của thuật toán DFS(u) được trình bày như sau:
+
+**Thuật toán DFS(u): //u là đỉnh bắt đầu duyệt**
+Begin
+<Thăm đỉnh u>; //Duyệt đỉnh u
+chuaxet[u] := FALSE; //Xác nhận đỉnh u đã duyệt
+for each v eke(u) do //Lấy mỗi đỉnh v eKe(u).
+if (chuaxet[v]) then //Nếu đỉnh v chưa duyệt
+DFS(v); //Duyệt theo chiều sâu bắt từ đỉnh v
+EndIf;
+EndFor;
+End.",3,"['data/eval_page_images/page_31.png', 'data/eval_page_images/page_32.png', 'data/eval_page_images/page_35.png']",1.0,0.0
+45,Kết quả duyệt BFS(1) trên đồ thị 13 đỉnh theo Bảng 3.2 là dãy đỉnh nào?,"Kết quả duyệt BFS(1) trên đồ thị 13 đỉnh theo Bảng 3.2 là dãy đỉnh: 1, 2, 3, 4, 6, 5, 7, 12, 8, 10, 9, 11, 13.",3,"['data/eval_page_images/page_38.png', 'data/eval_page_images/page_39.png', 'data/eval_page_images/page_67.png']",1.0,1.0
+46,Nêu bài toán và mô tả thuật toán xác định thành phần liên thông của đồ thị vô hướng.,"Bài toán xác định thành phần liên thông của đồ thị vô hướng là xác định các tập hợp đỉnh sao cho hai đỉnh thuộc cùng một tập hợp thì có đường đi giữa chúng, và không có đường đi nào giữa hai đỉnh thuộc hai tập hợp khác nhau. Thuật toán xác định thành phần liên thông của đồ thị vô hướng thường sử dụng thuật toán tìm kiếm theo chiều sâu (DFS) hoặc tìm kiếm theo chiều rộng (BFS). Thuật toán DFS hoặc BFS sẽ duyệt qua tất cả các đỉnh của đồ thị, và ghi nhận các đỉnh đã được duyệt vào một tập hợp. Khi thuật toán DFS hoặc BFS kết thúc, các tập hợp đỉnh đã được ghi nhận chính là các thành phần liên thông của đồ thị.",3,"['data/eval_page_images/page_12.png', 'data/eval_page_images/page_41.png', 'data/eval_page_images/page_42.png']",1.0,1.0
+47,"Trong ví dụ ma trận kề trang 42, thuật toán xác định được bao nhiêu thành phần liên thông và gồm những đỉnh nào?","Trong ví dụ ma trận kề trang 42, thuật toán xác định được 3 thành phần liên thông. Thành phần liên thông thứ nhất gồm các đỉnh 1, 2, 3, 4, 6, 7. Thành phần liên thông thứ hai gồm các đỉnh 5, 8, 9, 10. Thành phần liên thông thứ ba gồm các đỉnh 11, 12, 13.",3,"['data/eval_page_images/page_12.png', 'data/eval_page_images/page_41.png', 'data/eval_page_images/page_42.png']",1.0,1.0
+48,Mảng truoc[] trong thuật toán tìm đường đi giữa hai đỉnh s và t có tác dụng gì và được cập nhật như thế nào?,"Mảng `truoc[]` trong thuật toán tìm đường đi giữa hai đỉnh `s` và `t` có tác dụng lưu trữ đỉnh cha của mỗi đỉnh trong đường đi từ `s` đến `t`. Nó được cập nhật khi thuật toán duyệt qua các đỉnh. Cụ thể, khi thuật toán duyệt đến đỉnh `v` và đỉnh `u` là đỉnh cha của `v`, thì `truoc[v]` sẽ được gán giá trị là `u`. Điều này giúp chúng ta có thể khôi phục lại đường đi từ `s` đến `t` sau khi thuật toán kết thúc.",3,"['data/eval_page_images/page_44.png', 'data/eval_page_images/page_45.png', 'data/eval_page_images/page_108.png']",1.0,1.0
+49,So sánh đường đi từ đỉnh 1 đến đỉnh 13 tìm được bởi DFS và BFS trong Bảng 3.3 và Bảng 3.4.,"Bảng 3.3 và Bảng 3.4 mô tả quá trình tìm đường đi từ đỉnh 1 đến đỉnh 13 bằng hai thuật toán DFS (Depth-First Search) và BFS (Breadth-First Search). 
+
+- **Bảng 3.3** cho thấy kết quả tìm đường đi bằng thuật toán DFS. Thuật toán DFS sử dụng ngăn xếp (stack) để lưu trữ các đỉnh đã được thăm. Trong mỗi bước, thuật toán DFS sẽ chọn một đỉnh chưa được thăm kề với đỉnh hiện tại và thêm nó vào ngăn xếp. Quá trình này được lặp lại cho đến khi đỉnh đích được tìm thấy. Kết quả tìm được là đường đi 13->11-9-10-12-6-5-7-4-3-2-1.
+
+- **Bảng 3.4** cho thấy kết quả tìm đường đi bằng thuật toán BFS. Thuật toán BFS sử dụng hàng đợi (queue) để lưu trữ các đỉnh đã được thăm. Trong mỗi bước, thuật toán BFS sẽ chọn một đỉnh chưa được thăm kề với đỉnh hiện tại và thêm nó vào hàng đợi. Quá trình này được lặp lại cho đến khi đỉnh đích được tìm thấy. Kết quả tìm được là đường đi 13-10-12-6-2-1.
+
+So sánh hai đường đi, ta thấy đường đi tìm được bởi BFS ngắn hơn đường đi tìm được bởi DFS. Điều này là do BFS tìm kiếm theo chiều rộng, nghĩa là nó sẽ tìm kiếm tất cả các đỉnh kề với đỉnh hiện tại trước khi chuyển sang các đỉnh kề với các đỉnh kề. Điều này đảm bảo rằng BFS sẽ tìm được đường đi ngắn nhất từ đỉnh nguồn đến đỉnh đích.",3,"['data/eval_page_images/page_44.png', 'data/eval_page_images/page_46.png', 'data/eval_page_images/page_47.png']",1.0,1.0
+50,Thuật toán Strong-Connective kiểm tra tính liên thông mạnh của đồ thị có hướng như thế nào?,"Thuật toán Strong-Connective kiểm tra tính liên thông mạnh của đồ thị có hướng bằng cách thực hiện hai lần duyệt đồ thị: lần đầu tiên là duyệt theo chiều sâu (DFS) và lần thứ hai là duyệt theo chiều rộng (BFS). Thuật toán này dựa trên nguyên tắc: nếu đồ thị có hướng liên thông mạnh, thì từ bất kỳ đỉnh nào trong đồ thị, ta đều có thể đi đến tất cả các đỉnh khác bằng cách sử dụng cả hai thuật toán DFS và BFS. Thuật toán Strong-Connective kiểm tra tính liên thông mạnh bằng cách thực hiện hai lần duyệt đồ thị: lần đầu tiên là duyệt theo chiều sâu (DFS) và lần thứ hai là duyệt theo chiều rộng (BFS). Thuật toán này dựa trên nguyên tắc: nếu đồ thị có hướng liên thông mạnh, thì từ bất kỳ đỉnh nào trong đồ thị, ta đều có thể đi đến tất cả các đỉnh khác bằng cách sử dụng cả hai thuật toán DFS và BFS. Thuật toán Strong-Connective kiểm tra tính liên thông mạnh bằng cách thực hiện hai lần duyệt đồ thị: lần đầu tiên là duyệt theo chiều sâu (DFS) và lần thứ hai là duyệt theo chiều rộng (BFS). Thuật toán này dựa trên nguyên tắc: nếu đồ thị có hướng liên thông mạnh, thì từ bất kỳ đỉnh nào trong đồ thị, ta đều có thể đi đến tất cả các đỉnh khác bằng cách sử dụng cả hai thuật toán DFS và BFS. Thuật toán Strong-Connective kiểm tra tính liên thông mạnh bằng cách thực hiện hai lần duyệt đồ thị: lần đầu tiên là duyệt theo chiều sâu (DFS) và lần thứ hai là duyệt theo chiều rộng (BFS). Thuật toán này dựa trên nguyên tắc: nếu đồ thị có hướng liên thông mạnh, thì từ bất kỳ đỉnh nào trong đồ thị, ta đều có thể đi đến tất cả các đỉnh khác bằng cách sử dụng cả hai thuật toán DFS và BFS. Thuật toán Strong-Connective kiểm tra tính liên thông mạnh bằng cách thực hiện hai lần duyệt đồ thị: lần đầu tiên là duyệt theo chiều sâu (DFS) và lần thứ hai là duyệt theo chiều rộng (BFS). Thuật toán này dựa trên nguyên tắc: nếu đồ thị có hướng liên thông mạnh, thì từ bất kỳ đỉnh nào trong đồ thị, ta đều có thể đi đến tất cả các đỉnh khác bằng cách sử dụng cả hai thuật toán DFS và BFS. Thuật toán Strong-Connective kiểm tra tính liên thông mạnh bằng cách thực hiện hai lần duyệt đồ thị: lần đầu tiên là duyệt theo chiều sâu (DFS) và lần thứ hai là duyệt theo chiều rộng (BFS). Thuật toán này dựa trên nguyên tắc: nếu đồ thị có hướng liên thông mạnh, thì từ bất kỳ đỉnh nào trong đồ thị, ta đều có thể đi đến tất cả các đỉnh khác bằng cách sử dụng cả hai thuật toán DFS và BFS. Thuật toán Strong-Connective kiểm tra tính liên thông mạnh bằng cách thực hiện hai lần duyệt đồ thị: lần đầu tiên là duyệt theo chiều sâu (DFS) và lần thứ hai là duyệt theo chiều rộng (BFS). Thuật toán này dựa trên nguyên tắc: nếu đồ thị có hướng liên thông mạnh, thì từ bất kỳ đỉnh nào trong đồ thị, ta đều có thể đi đến tất cả các đỉnh khác bằng cách sử dụng cả hai thuật toán DFS và BFS. Thuật toán Strong-Connective kiểm tra tính liên thông mạnh bằng cách thực hiện hai lần duyệt đồ thị: lần đầu tiên là duyệt theo chiều sâu (DFS) và lần thứ hai là duyệt theo chiều rộng (BFS). Thuật toán này dựa trên nguyên tắc: nếu đồ thị có hướng liên thông mạnh, thì từ bất kỳ đỉnh nào trong đồ thị, ta đều có thể đi đến tất cả các đỉnh khác bằng cách sử dụng cả hai thuật toán DFS và BFS. Thuật toán Strong-Connective kiểm tra tính liên thông mạnh bằng cách thực hiện hai lần duyệt đồ thị: lần đầu tiên là duyệt theo chiều sâu (DFS) và lần thứ hai là duyệt theo chiều rộng (BFS). Thuật toán này dựa trên nguyên tắc: nếu đồ thị có hướng liên thông mạnh, thì từ bất kỳ đỉnh nào trong đồ thị, ta đều có thể đi đến tất cả các đỉnh khác bằng cách sử dụng cả hai thuật toán DFS và BFS. Thuật toán Strong-Connective kiểm tra tính liên thông mạnh bằng cách thực hiện hai lần duyệt đồ thị: lần đầu tiên là duyệt theo chiều sâu (DFS) và lần thứ hai là duyệt theo chiều rộng (BFS). Thuật toán này dựa trên nguyên tắc: nếu đồ thị có hướng liên thông mạnh, thì từ bất kỳ đỉnh nào trong đồ thị, ta đều có thể đi đến tất cả các đỉnh khác bằng cách sử dụng cả hai thuật toán DFS và BFS. Thuật toán Strong-Connective kiểm tra tính liên thông mạnh bằng cách thực hiện hai lần duyệt đồ thị: lần đầu tiên là duyệt theo chiều sâu (DFS) và lần thứ hai là duyệt theo chiều rộng (BFS). Thuật toán này dựa trên nguyên tắc: nếu đồ thị có hướng liên thông mạnh, thì từ bất kỳ đỉnh nào trong đồ thị, ta đều có thể đi đến tất cả các đỉnh khác bằng cách sử dụng cả hai thuật toán DFS và BFS. Thuật toán Strong-Connective kiểm tra tính liên thông mạnh bằng cách thực hiện hai lần duyệt đồ thị: lần đầu tiên là duyệt theo chiều sâu (DFS) và lần thứ hai là duyệt theo chiều rộng (BFS). Thuật toán này dựa trên nguyên tắc: nếu đồ thị có hướng liên thông mạnh, thì từ bất kỳ đỉnh nào trong đồ thị, ta đều có thể đi đến tất cả các đỉnh khác bằng cách sử dụng cả hai thuật toán DFS và BFS. Thuật toán Strong-Connective kiểm tra tính liên thông mạnh bằng cách thực hiện hai lần duyệt đồ thị: lần đầu tiên là duyệt theo chiều sâu (DFS) và lần thứ hai là duyệt theo chiều rộng (BFS). Thuật toán này dựa trên nguyên tắc: nếu đồ thị có hướng liên thông mạnh, thì từ bất kỳ đỉnh nào trong đồ thị, ta đều có thể đi đến tất cả các đỉnh khác bằng cách sử dụng cả hai thuật toán DFS và BFS. Thuật toán Strong-Connective kiểm tra tính liên thông mạnh bằng cách thực hiện hai lần duyệt đồ thị: lần đầu tiên là duyệt theo chiều sâu (DFS) và lần thứ hai là duyệt theo chiều rộng (BFS). Thuật toán này dựa trên nguyên tắc: nếu đồ thị có hướng liên thông mạnh, thì từ bất kỳ đỉnh nào trong đồ thị, ta đều có thể đi đến tất cả các đỉnh khác bằng cách sử dụng cả hai thuật toán DFS và BFS. Thuật toán Strong-Connective kiểm tra tính liên thông mạnh bằng cách thực hiện hai lần duyệt đồ thị: lần đầu tiên là duyệt theo chiều sâu (DFS) và lần thứ hai là duyệt theo chiều rộng (BFS). Thuật toán này dựa trên nguyên tắc: nếu đồ thị có hướng liên thông mạnh, thì từ bất kỳ đỉnh nào trong đồ thị, ta đều có thể đi đến tất cả các đỉnh khác bằng cách sử dụng cả hai thuật toán DFS và BFS. Thuật toán Strong-Connective kiểm tra tính liên thông mạnh bằng cách thực hiện hai lần duyệt đồ thị: lần đầu tiên là duyệt theo chiều sâu (DFS) và lần thứ hai là duyệt theo chiều rộng (BFS). Thuật toán này dựa trên nguyên tắc: nếu đồ thị có hướng liên thông mạnh, thì từ bất kỳ đỉnh nào trong đồ thị, ta đều có thể đi đến tất cả các đỉnh khác bằng cách sử dụng cả hai thuật toán DFS và BFS. Thuật toán Strong-Connective kiểm tra tính liên thông mạnh bằng cách thực hiện hai lần duyệt đồ thị: lần đầu tiên là duyệt theo chiều sâu (DFS) và lần thứ hai là duyệt theo chiều rộng (BFS). Thuật toán này dựa trên nguyên tắc: nếu đồ thị có hướng liên thông mạnh, thì từ bất kỳ đỉnh nào trong đồ thị, ta đều có thể đi đến tất cả các đỉnh khác bằng cách sử dụng cả hai thuật toán DFS và BFS. Thuật toán Strong-Connective kiểm tra tính liên thông mạnh bằng cách thực hiện hai lần duyệt đồ thị: lần đầu tiên là duyệt theo chiều sâu (DFS) và lần thứ hai là duyệt theo chiều rộng (BFS). Thuật toán này dựa trên nguyên tắc: nếu đồ thị có hướng liên thông mạnh, thì từ bất kỳ đỉnh nào trong đồ thị, ta đều có thể đi đến tất cả các đỉnh khác bằng cách sử dụng cả hai thuật toán DFS và BFS. Thuật toán Strong-Connective kiểm tra tính liên thông mạnh bằng cách thực hiện hai lần duyệt đồ thị: lần đầu tiên là duyệt theo chiều sâu (DFS) và lần thứ hai là duyệt theo chiều rộng (BFS). Thuật toán này dựa trên nguyên tắc: nếu đồ thị có hướng liên thông mạnh, thì từ bất kỳ đỉnh nào trong đồ thị, ta đều có thể đi đến tất cả các đỉnh khác bằng cách sử dụng cả hai thuật toán DFS và BFS. Thuật toán Strong-Connective kiểm tra tính liên thông mạnh bằng cách thực hiện hai lần duyệt đồ thị: lần đầu tiên là duyệt theo chiều sâu (DFS) và lần thứ hai là duyệt theo chiều rộng (BFS). Thuật toán này dựa trên nguyên tắc: nếu đồ thị có hướng liên thông mạnh, thì từ bất kỳ đỉnh nào trong đồ thị, ta đều có thể đi đến tất cả các đỉnh khác bằng cách sử dụng cả hai thuật toán DFS và BFS. Thuật toán Strong-Connective kiểm tra tính liên thông mạnh bằng cách thực hiện hai lần duyệt đồ thị:",3,"['data/eval_page_images/page_49.png', 'data/eval_page_images/page_50.png', 'data/eval_page_images/page_51.png']",1.0,1.0
+51,"Trong Bảng 3.5, kết luận về tính liên thông mạnh của đồ thị 13 đỉnh là gì và tại sao?","Bảng 3.5 cho thấy đồ thị 13 đỉnh không liên thông mạnh. Lý do là vì trong cột 'DFS(u)=V?' của bảng, có một số hàng có giá trị 'No', ví dụ như hàng 11 và 12. Điều này có nghĩa là có ít nhất một đỉnh trong đồ thị không thể truy cập được từ tất cả các đỉnh khác. Do đó, đồ thị không liên thông mạnh.",3,"['data/eval_page_images/page_33.png', 'data/eval_page_images/page_49.png', 'data/eval_page_images/page_50.png']",1.0,1.0
+52,Trình bày thuật toán Duyet-Tru tìm các đỉnh trụ của đồ thị vô hướng.,"Thuật toán Duyet-Tru tìm các đỉnh trụ của đồ thị vô hướng được mô tả như sau:
+
+1. **Khởi tạo:** Khởi tạo mảng `chuaxet` với tất cả các phần tử là `True`, biểu thị rằng tất cả các đỉnh đều chưa được duyệt.
+2. **Duyệt đồ thị:** Duyệt đồ thị bằng thuật toán DFS (Depth-First Search) hoặc BFS (Breadth-First Search) từ mỗi đỉnh `u` trong đồ thị.
+3. **Kiểm tra đỉnh trụ:** Trong quá trình duyệt, nếu sau khi loại bỏ đỉnh `u` và các cạnh nối với nó, số thành phần liên thông của đồ thị tăng lên, thì đỉnh `u` là đỉnh trụ.
+4. **Ghi nhận đỉnh trụ:** Ghi nhận đỉnh `u` là đỉnh trụ.
+5. **Khởi tạo lại:** Khởi tạo lại mảng `chuaxet` để tiếp tục duyệt các đỉnh khác.
+
+Thuật toán này dựa trên nguyên tắc: một đỉnh là đỉnh trụ nếu việc loại bỏ nó làm tăng số thành phần liên thông của đồ thị. Thuật toán DFS hoặc BFS được sử dụng để duyệt đồ thị và kiểm tra xem việc loại bỏ một đỉnh có làm tăng số thành phần liên thông hay không.",3,"['data/eval_page_images/page_12.png', 'data/eval_page_images/page_53.png', 'data/eval_page_images/page_56.png']",1.0,1.0
+53,"Theo Bảng 3.6, những đỉnh nào của đồ thị 13 đỉnh được xác định là đỉnh trụ?","Theo Bảng 3.6, những đỉnh 5, 6 và 10 của đồ thị 13 đỉnh được xác định là đỉnh trụ.",3,"['data/eval_page_images/page_12.png', 'data/eval_page_images/page_46.png', 'data/eval_page_images/page_53.png']",1.0,1.0
+54,Trình bày thuật toán Duyet-Cau tìm các cạnh cầu của đồ thị vô hướng.,"Thuật toán Duyet-Cau tìm các cạnh cầu của đồ thị vô hướng được trình bày như sau:
+
+**a) Đặt bài toán:**
+Cho đồ thị vô hướng G=<V,E>. Cạnh e∈E được gọi là cầu nếu loại bỏ e làm tăng thành phần liên thông của đồ thị. Bài toán đặt ra là cho trước đồ thị vô hướng G=<V,E>, hãy liệt kê tất cả các cạnh cầu của đồ thị.
+
+**b) Mô tả thuật toán:**
+Không hạn chế tính tổng quát của bài toán ta cũng giả thiết đồ thị G=<V,E> đã cho là liên thông. Trong trường hợp đồ thị không liên thông, bài toán duyệt cầu thực hiện trên mỗi thành phần liên thông của đồ thị.
+
+**c) Kiểm nghiệm thuật toán:**
+Giả sử ta cần xác định đồ thị vô hướng G=<V,E> được biểu diễn dưới dạng ma trận kề dưới đây có những cạnh cầu? Khi đó các bước thực hiện theo thuật toán Hình 3.10 được thực hiện theo Bảng 3.7 dưới đây.
+
+**d) Cài đặt thuật toán:**
+Thuật toán được cài đặt theo khuôn dạng đồ thị được qui ước trong Mục 2.3.1 với các thủ tục sau:
+
+**Thuật toán Duyet-Cau (G=<V,E>):**
+ReInit(); //∀u∈V: chuaxet[u] = True;
+for each e∈E do { //Lấy mỗi cạnh thuộc đồ thị
+E = E\{e}; //Loại bỏ cạnh e ra khỏi đồ thị
+if (DFS(1) ≠ V) then //Nếu tăng thành phần liên thông của đồ thị
+<Ghi nhận e là cầu>;
+endif;
+E = E∪{e}; //Hoàn trả lại cạnh e
+ReInit(); //Khởi tạo lại các mảng chuaxet[]
+endfor;",3,"['data/eval_page_images/page_56.png', 'data/eval_page_images/page_57.png', 'data/eval_page_images/page_58.png']",1.0,1.0
+55,"Theo Bảng 3.7, đồ thị có những cạnh cầu nào?","Theo Bảng 3.7, đồ thị có 2 cạnh cầu là (3,5) và (9,10).",3,"['data/eval_page_images/page_12.png', 'data/eval_page_images/page_57.png', 'data/eval_page_images/page_58.png']",1.0,1.0
+56,"Phân biệt chu trình Euler, đường đi Euler, đồ thị Euler và đồ thị nửa Euler.","Chu trình Euler là một chu trình đơn trong đồ thị đi qua mỗi cạnh của đồ thị đúng một lần. Đường đi đơn trong đồ thị đi qua mỗi cạnh của nó đúng một lần được gọi là đường đi Euler. Đồ thị được gọi là đồ thị Euler nếu nó có chu trình Euler. Đồ thị có đường đi Euler được gọi là nửa Euler. 
+
+Đồ thị Euler là đồ thị có chu trình Euler. Đồ thị nửa Euler là đồ thị có đường đi Euler nhưng không có chu trình Euler. 
+
+Ví dụ 1: Đồ thị G1 là đồ thị Euler vì nó có chu trình Euler a, e, c, d, e, b, a. Đồ thị G3 không có chu trình Euler nhưng chứa đường đi Euler a, c, d, e, b, d, a, b vì thế G3 là nửa Euler. G2 không có chu trình Euler cũng như đường đi Euler. 
+
+Ví dụ 2: Đồ thị H2 là đồ thị Euler vì nó chứa chu trình Euler a, b, c, d, e, a vì vậy nó là đồ thị Euler. Đồ thị H3 không có chu trình Euler nhưng có đường đi Euler a, b, c, a, d, c nên nó là đồ thị nửa Euler. Đồ thị H1 không chứa chu trình Euler cũng như chu trình Euler.",3,"['data/eval_page_images/page_68.png', 'data/eval_page_images/page_69.png', 'data/eval_page_images/page_83.png']",1.0,1.0
+57,"Xét các đồ thị G1, G2, G3 trong Hình 4.1, đồ thị nào là Euler, nửa Euler hoặc không phải?","Để xác định đồ thị nào là Euler, nửa Euler hoặc không phải, chúng ta cần kiểm tra xem đồ thị có chu trình Euler hay không. Chu trình Euler là một chu trình đi qua mỗi cạnh của đồ thị đúng một lần. 
+
+- **Đồ thị G1**: Đồ thị G1 là đồ thị Euler vì nó có chu trình Euler a, e, c, d, e, b, a. 
+- **Đồ thị G2**: Đồ thị G2 không có chu trình Euler nhưng có đường đi Euler a, c, d, e, b, d, a, b vì thế G3 là nửa Euler. 
+- **Đồ thị G3**: Đồ thị G3 không có chu trình Euler cũng như đường đi Euler. 
+
+Vậy, đồ thị G1 là đồ thị Euler, đồ thị G2 là đồ thị nửa Euler và đồ thị G3 không phải là đồ thị Euler.",3,"['data/eval_page_images/page_27.png', 'data/eval_page_images/page_68.png', 'data/eval_page_images/page_69.png']",1.0,1.0
+58,Phát biểu Định lý 1 về điều kiện cần và đủ để đồ thị vô hướng liên thông là đồ thị Euler.,"**Định lý 1:**  Giả sử G = <V, E> là đồ thị vô hướng với m cạnh. Khi đó 2m = Σ deg(v).
+
+**Hệ quả:** Trong đồ thị vô hướng G=<V, E>, số các đỉnh bậc lẻ là một số chẵn.",3,"['data/eval_page_images/page_10.png', 'data/eval_page_images/page_73.png', 'data/eval_page_images/page_74.png']",1.0,1.0
+59,Điều kiện cần và đủ để đồ thị có hướng liên thông yếu là đồ thị Euler là gì?,"Điều kiện cần và đủ để đồ thị có hướng liên thông yếu là đồ thị Euler là: Đồ thị có hướng liên thông yếu G=<V,E> là đồ thị Euler khi và chỉ khi tất cả các đỉnh của nó đều có bán định bậc ra bằng bán định bậc vào (điều này làm cho đồ thị là liên thông mạnh).",3,"['data/eval_page_images/page_68.png', 'data/eval_page_images/page_69.png', 'data/eval_page_images/page_74.png']",0.0,1.0
+60,"Trong ví dụ trang 69, các đỉnh của đồ thị vô hướng có bậc như thế nào để khẳng định nó là đồ thị Euler?","Để khẳng định một đồ thị vô hướng là đồ thị Euler, các đỉnh của đồ thị phải có bậc chẵn. Điều này có nghĩa là mỗi đỉnh phải có số cạnh kết nối với nó là một số chẵn. Ví dụ, trong đồ thị G1, tất cả các đỉnh đều có bậc 2, do đó G1 là đồ thị Euler. Tuy nhiên, đồ thị G3 không phải là đồ thị Euler vì nó không có chu trình Euler, mặc dù nó có đường đi Euler.",3,"['data/eval_page_images/page_68.png', 'data/eval_page_images/page_69.png', 'data/eval_page_images/page_70.png']",1.0,1.0
+61,Thuật toán tìm chu trình Euler (Euler-Cycle) sử dụng cấu trúc dữ liệu gì và cơ chế đẩy phần tử sang mảng CE ra sao?,"Thuật toán tìm chu trình Euler sử dụng cấu trúc dữ liệu stack (ngăn xếp) và mảng CE (chu trình Euler). 
+
+Cơ chế đẩy phần tử sang mảng CE được thực hiện như sau:
+
+1. **Khởi tạo:** Khởi tạo mảng CE với giá trị ban đầu là 0.
+2. **Lặp:** Lặp cho đến khi stack rỗng:
+    * Lấy đỉnh ở đầu stack.
+    * Nếu danh sách kề của đỉnh đó chưa rỗng:
+        * Lấy đỉnh đầu tiên trong danh sách kề.
+        * Đẩy đỉnh đó vào stack.
+        * Loại bỏ cạnh nối đỉnh hiện tại với đỉnh vừa lấy.
+    * Ngược lại:
+        * Lấy đỉnh ở đầu stack.
+        * Đẩy đỉnh đó vào mảng CE.
+3. **Trả kết quả:** Lật ngược lại các đỉnh trong mảng CE để nhận được chu trình Euler.",3,"['data/eval_page_images/page_70.png', 'data/eval_page_images/page_73.png', 'data/eval_page_images/page_75.png']",1.0,1.0
+62,Kết quả chu trình Euler thu được trong Bảng 4.1 bắt đầu tại đỉnh 1 là chu trình nào?,Kết quả chu trình Euler thu được trong Bảng 4.1 bắt đầu tại đỉnh 1 là chu trình: 1-2-3-4-7-5-2-6-5-3-11-4-8-9-10-11-12-9-13-12-10-8-7-6-1.,3,"['data/eval_page_images/page_70.png', 'data/eval_page_images/page_71.png', 'data/eval_page_images/page_75.png']",1.0,1.0
+63,"Phát biểu Định lý 2 về điều kiện để đồ thị vô hướng liên thông là nửa Euler và vị trí đỉnh xuất phát, kết thúc của đường đi Euler.","Định lý 2 về điều kiện để đồ thị vô hướng liên thông là nửa Euler và vị trí đỉnh xuất phát, kết thúc của đường đi Euler phát biểu như sau:
+
+Đồ thị vô hướng liên thông G=<V,E> là đồ thị nửa Euler khi và chỉ khi G có 0 hoặc 2 đỉnh bậc lẻ. Trong trường hợp G có hai đỉnh bậc lẻ, đường đi Euler xuất phát tại một đỉnh bậc lẻ và kết thúc tại đỉnh bậc lẻ còn lại. Trong trường hợp G có 0 đỉnh bậc lẻ, G chính là đồ thị Euler.
+
+Để tìm một đường đi Euler trên đồ thị vô hướng, ta sử dụng kết quả của định lý 2. Để tìm một đường đi Euler trên đồ thị có hướng, ta sử dụng kết quả của định lý 3.
+
+Định lý 3: Đồ thị có hướng liên thông yếu G=<V,E> là đồ thị nửa Euler khi và chỉ khi tồn tại đúng hai đỉnh u, v ∈ V sao cho deg+(u) - deg(u) = deg+(v) - deg(v) = 1, các đỉnh s≠u, s≠v còn lại có deg+(s) = deg(s). Đường đi Euler sẽ xuất phát tại đỉnh u và kết thúc tại đỉnh v.",3,"['data/eval_page_images/page_69.png', 'data/eval_page_images/page_73.png', 'data/eval_page_images/page_74.png']",1.0,1.0
+64,Phát biểu Định lý 3 về điều kiện để đồ thị có hướng liên thông yếu là nửa Euler.,"Định lý 2 về điều kiện để đồ thị vô hướng liên thông là nửa Euler và vị trí đỉnh xuất phát, kết thúc của đường đi Euler phát biểu như sau:
+
+Đồ thị vô hướng liên thông G=<V,E> là đồ thị nửa Euler khi và chỉ khi G có 0 hoặc 2 đỉnh bậc lẻ. Trong trường hợp G có hai đỉnh bậc lẻ, đường đi Euler xuất phát tại một đỉnh bậc lẻ và kết thúc tại đỉnh bậc lẻ còn lại. Trong trường hợp G có 0 đỉnh bậc lẻ, G chính là đồ thị Euler.
+
+Để tìm một đường đi Euler trên đồ thị vô hướng, ta sử dụng kết quả của định lý 2. Để tìm một đường đi Euler trên đồ thị có hướng, ta sử dụng kết quả của định lý 3.
+
+Định lý 3: Đồ thị có hướng liên thông yếu G=<V,E> là đồ thị nửa Euler khi và chỉ khi tồn tại đúng hai đỉnh u, v ∈ V sao cho deg+(u) - deg(u) = deg+(v) - deg(v) = 1, các đỉnh s≠u, s≠v còn lại có deg+(s) = deg(s). Đường đi Euler sẽ xuất phát tại đỉnh u và kết thúc tại đỉnh v.",3,"['data/eval_page_images/page_69.png', 'data/eval_page_images/page_73.png', 'data/eval_page_images/page_74.png']",1.0,0.0
+65,Thuật toán tìm đường đi Euler (Euler-Path) khác thuật toán tìm chu trình Euler ở điểm nào?,"Thuật toán tìm chu trình Euler sử dụng cấu trúc dữ liệu stack (ngăn xếp) và mảng CE (chu trình Euler). 
+
+Cơ chế đẩy phần tử sang mảng CE được thực hiện như sau:
+
+1. **Khởi tạo:** Khởi tạo mảng CE với giá trị ban đầu là 0.
+2. **Lặp:** Lặp cho đến khi stack rỗng:
+    * Lấy đỉnh ở đầu stack.
+    * Nếu danh sách kề của đỉnh đó chưa rỗng:
+        * Lấy đỉnh đầu tiên trong danh sách kề.
+        * Đẩy đỉnh đó vào stack.
+        * Loại bỏ cạnh nối đỉnh hiện tại với đỉnh vừa lấy.
+    * Ngược lại:
+        * Lấy đỉnh ở đầu stack.
+        * Đẩy đỉnh đó vào mảng CE.
+3. **Trả kết quả:** Lật ngược lại các đỉnh trong mảng CE để nhận được chu trình Euler.",3,"['data/eval_page_images/page_70.png', 'data/eval_page_images/page_73.png', 'data/eval_page_images/page_75.png']",1.0,0.0
+66,Kết quả đường đi Euler thu được trong Bảng 4.2 là đường đi nào?,"Bảng 4.2 không được cung cấp trong tài liệu. Tuy nhiên, dựa vào nội dung của tài liệu, chúng ta có thể suy luận rằng Bảng 4.2 có thể chứa kết quả của thuật toán tìm đường đi Euler được mô tả trong Hình 4.4. Thuật toán này sử dụng một ngăn xếp để lưu trữ các đỉnh đã được thăm và một danh sách các cạnh đã được loại bỏ. Thuật toán sẽ lặp lại cho đến khi ngăn xếp rỗng, và kết quả cuối cùng sẽ là một đường đi Euler.",3,"['data/eval_page_images/page_68.png', 'data/eval_page_images/page_75.png', 'data/eval_page_images/page_86.png']",0.0,1.0
+67,"Định nghĩa đường đi Hamilton, chu trình Hamilton, đồ thị Hamilton và đồ thị nửa Hamilton.","Chu trình Euler là một chu trình đơn trong đồ thị đi qua mỗi cạnh của đồ thị đúng một lần. Đường đi đơn trong đồ thị đi qua mỗi cạnh của nó đúng một lần được gọi là đường đi Euler. Đồ thị được gọi là đồ thị Euler nếu nó có chu trình Euler. Đồ thị có đường đi Euler được gọi là nửa Euler. 
+
+Đồ thị Euler là đồ thị có chu trình Euler. Đồ thị nửa Euler là đồ thị có đường đi Euler nhưng không có chu trình Euler. 
+
+Ví dụ 1: Đồ thị G1 là đồ thị Euler vì nó có chu trình Euler a, e, c, d, e, b, a. Đồ thị G3 không có chu trình Euler nhưng chứa đường đi Euler a, c, d, e, b, d, a, b vì thế G3 là nửa Euler. G2 không có chu trình Euler cũng như đường đi Euler. 
+
+Ví dụ 2: Đồ thị H2 là đồ thị Euler vì nó chứa chu trình Euler a, b, c, d, e, a vì vậy nó là đồ thị Euler. Đồ thị H3 không có chu trình Euler nhưng có đường đi Euler a, b, c, a, d, c nên nó là đồ thị nửa Euler. Đồ thị H1 không chứa chu trình Euler cũng như chu trình Euler.",3,"['data/eval_page_images/page_68.png', 'data/eval_page_images/page_69.png', 'data/eval_page_images/page_83.png']",1.0,0.0
+68,Mô tả thuật toán quay lui Hamilton(k) liệt kê tất cả các chu trình Hamilton bắt đầu tại đỉnh k.,"Thuật toán quay lui Hamilton(k) là một thuật toán đệ quy được sử dụng để liệt kê tất cả các chu trình Hamilton bắt đầu tại đỉnh k trong một đồ thị. Thuật toán này hoạt động bằng cách thử tất cả các khả năng có thể để tìm một chu trình Hamilton. Thuật toán này được thực hiện như sau:
+
+1. Khởi tạo một mảng chuaxet[] để lưu trữ trạng thái của các đỉnh. Ban đầu, tất cả các đỉnh đều được đánh dấu là chưa được thăm.
+2. Khởi tạo một mảng X[] để lưu trữ chu trình Hamilton hiện tại. Ban đầu, X[1] được gán bằng đỉnh k.
+3. Gọi hàm Hamilton(k) để tìm kiếm chu trình Hamilton bắt đầu tại đỉnh k.
+4. Trong hàm Hamilton(k), thuật toán sẽ thử tất cả các đỉnh chưa được thăm. Nếu đỉnh y chưa được thăm và có cạnh nối với đỉnh X[k-1], thuật toán sẽ thêm đỉnh y vào chu trình Hamilton hiện tại và gọi hàm Hamilton(k+1) để tìm kiếm chu trình Hamilton tiếp theo.
+5. Nếu k bằng n+1, tức là chu trình Hamilton đã được tìm thấy, thuật toán sẽ ghi nhận chu trình Hamilton hiện tại vào mảng chu trình Hamilton.
+6. Nếu k nhỏ hơn n+1, thuật toán sẽ tiếp tục thử tất cả các đỉnh chưa được thăm.
+7. Sau khi thuật toán kết thúc, mảng chu trình Hamilton sẽ chứa tất cả các chu trình Hamilton bắt đầu tại đỉnh k.
+
+Thuật toán quay lui Hamilton(k) là một thuật toán hiệu quả để liệt kê tất cả các chu trình Hamilton trong một đồ thị. Tuy nhiên, thuật toán này có thể mất nhiều thời gian để tìm kiếm các chu trình Hamilton trong một đồ thị lớn.",3,"['data/eval_page_images/page_79.png', 'data/eval_page_images/page_80.png', 'data/eval_page_images/page_83.png']",1.0,1.0
+69,Định nghĩa cây và rừng trong lý thuyết đồ thị.,"Trong lý thuyết đồ thị, **cây** là một đồ thị vô hướng liên thông không có chu trình. Nói cách khác, cây là một đồ thị mà mỗi cặp đỉnh đều có duy nhất một đường đi giữa chúng. **Rừng** là một đồ thị mà mỗi thành phần liên thông của nó là một cây.",3,"['data/eval_page_images/page_14.png', 'data/eval_page_images/page_87.png', 'data/eval_page_images/page_88.png']",1.0,1.0
+70,Liệt kê các khẳng định tương đương với định nghĩa T là một cây n đỉnh.,"Định nghĩa T là một cây n đỉnh tương đương với các khẳng định sau:
+
+a) T là một cây;
+b) T không có chu trình và có n-1 cạnh;
+c) T liên thông và có đúng n-1 cạnh;
+d) T liên thông và mỗi cạnh của nó đều là cầu;
+e) Giữa hai đỉnh bất kỳ của T được nối với nhau bởi đúng một đường đi đơn;
+f) T không chứa chu trình nhưng nếu thêm vào nó một cạnh ta thu được đúng một chu trình.",3,"['data/eval_page_images/page_87.png', 'data/eval_page_images/page_88.png', 'data/eval_page_images/page_96.png']",1.0,1.0
+71,Cây khung (cây bao trùm) của đồ thị vô hướng liên thông G là gì?,"Cây khung (cây bao trùm) của đồ thị vô hướng liên thông G là một đồ thị con T của G thỏa mãn hai điều kiện:
+1. T là một cây.
+2. Tập đỉnh của T bằng tập đỉnh của G.
+
+Nói cách khác, cây khung là một cây con của đồ thị G bao gồm tất cả các đỉnh của G và một tập hợp các cạnh con của G sao cho các đỉnh của G vẫn liên thông với nhau.",3,"['data/eval_page_images/page_87.png', 'data/eval_page_images/page_88.png', 'data/eval_page_images/page_106.png']",1.0,1.0
+72,"Thuật toán Tree-DFS(u) xây dựng cây khung kết nạp cạnh (u, v) vào cây T khi nào?","Thuật toán Tree-DFS(u) xây dựng cây khung kết nạp cạnh (u, v) vào cây T khi đỉnh v chưa được xét đến, tức là chuaxet[v] = False. Điều này có nghĩa là đỉnh v chưa được thêm vào cây khung T. Thuật toán sẽ duyệt qua danh sách kề của đỉnh u và kiểm tra từng đỉnh v. Nếu đỉnh v chưa được xét đến, thuật toán sẽ kết nạp cạnh (u, v) vào cây khung T và gọi đệ quy thuật toán Tree-DFS(v) để tiếp tục duyệt cây khung.",3,"['data/eval_page_images/page_88.png', 'data/eval_page_images/page_89.png', 'data/eval_page_images/page_92.png']",1.0,1.0
+73,Tập cạnh của cây khung T nhận được từ thuật toán Tree-Graph-DFS trong Bảng 5.1 gồm những cạnh nào?,"Tập cạnh của cây khung T nhận được từ thuật toán Tree-Graph-DFS trong Bảng 5.1 gồm các cạnh sau: (1,2), (2,3), (3,4), (3,5), (5,6), (6,7), (7,8), (8,9), (9,10), (10,11), (11,12), (12,13).",3,"['data/eval_page_images/page_89.png', 'data/eval_page_images/page_90.png', 'data/eval_page_images/page_92.png']",1.0,1.0
+74,Mô tả thuật toán Tree-BFS(u) xây dựng cây khung của đồ thị.,"Thuật toán Tree-DFS(u) xây dựng cây khung kết nạp cạnh (u, v) vào cây T khi đỉnh v chưa được xét đến, tức là chuaxet[v] = False. Điều này có nghĩa là đỉnh v chưa được thêm vào cây khung T. Thuật toán sẽ duyệt qua danh sách kề của đỉnh u và kiểm tra từng đỉnh v. Nếu đỉnh v chưa được xét đến, thuật toán sẽ kết nạp cạnh (u, v) vào cây khung T và gọi đệ quy thuật toán Tree-DFS(v) để tiếp tục duyệt cây khung.",3,"['data/eval_page_images/page_88.png', 'data/eval_page_images/page_89.png', 'data/eval_page_images/page_92.png']",1.0,0.0
+75,Tập cạnh cây khung T thu được theo thuật toán Tree-BFS trong Bảng 5.2 gồm những cạnh nào?,"Tập cạnh của cây khung T nhận được từ thuật toán Tree-Graph-DFS trong Bảng 5.1 gồm các cạnh sau: (1,2), (2,3), (3,4), (3,5), (5,6), (6,7), (7,8), (8,9), (9,10), (10,11), (11,12), (12,13).",3,"['data/eval_page_images/page_89.png', 'data/eval_page_images/page_90.png', 'data/eval_page_images/page_92.png']",1.0,0.0
+76,Phát biểu bài toán tìm cây khung nhỏ nhất (MST) và nêu 2 ứng dụng thực tế được đề cập.,"Bài toán tìm cây khung nhỏ nhất (MST) là bài toán tìm cây con của một đồ thị vô hướng liên thông sao cho tổng trọng số của các cạnh trong cây con đó là nhỏ nhất. Ứng dụng thực tế của bài toán MST được đề cập trong tài liệu là:
+
+1. **Bài toán nối mạng máy tính:**  Tìm cách nối các máy tính trong mạng sao cho chi phí là nhỏ nhất.
+2. **Bài toán xây dựng hệ thống cable:**  Tìm cách xây dựng hệ thống cable điện thoại nối các điểm của một mạng viễn thông sao cho chi phí là nhỏ nhất.",3,"['data/eval_page_images/page_87.png', 'data/eval_page_images/page_95.png', 'data/eval_page_images/page_96.png']",1.0,1.0
+77,Trình bày thuật toán Kruskal tìm cây khung nhỏ nhất dạng mã giả.,"Thuật toán Kruskal là một thuật toán tham lam để tìm cây khung nhỏ nhất (MST) của một đồ thị liên thông. Thuật toán này hoạt động bằng cách chọn các cạnh có trọng số nhỏ nhất một cách tuần tự, đồng thời đảm bảo rằng việc thêm cạnh mới không tạo thành chu trình trong cây khung. Dưới đây là thuật toán Kruskal dạng mã giả:
+
+**Thuật toán Kruskal:**
+Begin
+Bước 1 (Khởi tạo):
+T = Ø; // Khởi tạo tập cạnh cây khung là Ø
+d(H) = 0; // Khởi tạo độ dài nhỏ nhất cây khung là 0
+Bước 2 (Sắp xếp):
+< Sắp xếp các cạnh của đồ thị theo thứ tự giảm dần của trọng số;
+Bước 3 (Lặp):
+while (|T| < n-1 && E ≠ Ø) do { // Lặp nếu E ≠ Ø và |T| < n-1
+e = <Cạnh có độ dài nhỏ nhất>;
+E = E \ {e}; // Loại cạnh e ra khỏi đồ thị
+if (T ∪ {e} không tạo nên chu trình) then {
+T = T ∪ {e}; // Kết nạp e vào tập cạnh cây khung
+d(H) = d(H) + d(e); // Độ dài của tập cạnh cây khung
+endif;
+endwhile;
+Bước 4 (Trả lại kết quả):
+if (|T| < n-1) then <Đồ thị không liên thông>;
+else
+Return (T, d(H));
+end.
+End.",3,"['data/eval_page_images/page_87.png', 'data/eval_page_images/page_96.png', 'data/eval_page_images/page_97.png']",1.0,1.0
+78,"Theo Bảng kiểm nghiệm Kruskal trang 98, tổng trọng số độ dài nhỏ nhất của cây khung D(T) bằng bao nhiêu và gồm những cạnh nào?","Theo Bảng kiểm nghiệm Kruskal trang 98, tổng trọng số độ dài nhỏ nhất của cây khung D(T) bằng 60 và gồm các cạnh: (1,3), (1,2), (1,4), (2,6), (2,7), (4,5), (5,10), (6,8), (6,9), (8,12), (8,13), (9,11).",3,"['data/eval_page_images/page_96.png', 'data/eval_page_images/page_101.png', 'data/eval_page_images/page_102.png']",1.0,1.0
+79,"Trong cài đặt thuật toán Kruskal, các hàm Find() và Union() sử dụng mảng nào để kiểm tra chu trình?","Trong cài đặt thuật toán Kruskal, các hàm Find() và Union() sử dụng mảng `father` để kiểm tra chu trình. Mảng `father` lưu trữ cha của mỗi đỉnh trong cây khung. Khi thêm một cạnh mới vào cây khung, hàm Find() sẽ kiểm tra xem hai đỉnh của cạnh có cùng cha hay không. Nếu có, điều đó có nghĩa là thêm cạnh này sẽ tạo thành chu trình. Ngược lại, nếu hai đỉnh có cha khác nhau, hàm Union() sẽ kết nối hai cha của chúng lại với nhau.",3,"['data/eval_page_images/page_43.png', 'data/eval_page_images/page_98.png', 'data/eval_page_images/page_100.png']",1.0,1.0
+80,So sánh phạm vi hiệu quả giữa thuật toán Kruskal và thuật toán Prim.,"Thuật toán Kruskal và thuật toán Prim đều là các thuật toán tìm cây khung nhỏ nhất (Minimum Spanning Tree - MST) trong đồ thị. Tuy nhiên, phạm vi hiệu quả của chúng có sự khác biệt:
+
+* **Thuật toán Kruskal:** Thuật toán này hiệu quả hơn khi đồ thị có số cạnh lớn, đặc biệt là khi đồ thị có cấu trúc cây. Nó hoạt động bằng cách sắp xếp các cạnh theo thứ tự tăng dần trọng số và thêm các cạnh vào cây khung một cách tuần tự, đảm bảo không tạo vòng lặp. Thuật toán Kruskal có thể xử lý đồ thị không liên thông, nhưng hiệu quả của nó sẽ giảm khi số cạnh của đồ thị tăng lên.
+
+* **Thuật toán Prim:** Thuật toán Prim hiệu quả hơn khi đồ thị có số cạnh nhỏ, đặc biệt là khi đồ thị có cấu trúc gần như là một cây. Nó hoạt động bằng cách chọn một đỉnh ban đầu và thêm các cạnh có trọng số nhỏ nhất vào cây khung, đảm bảo không tạo vòng lặp. Thuật toán Prim có thể xử lý đồ thị không liên thông, nhưng hiệu quả của nó sẽ giảm khi số cạnh của đồ thị giảm xuống.
+
+Nói chung, thuật toán Kruskal phù hợp hơn cho đồ thị có số cạnh lớn, trong khi thuật toán Prim phù hợp hơn cho đồ thị có số cạnh nhỏ.",3,"['data/eval_page_images/page_96.png', 'data/eval_page_images/page_101.png', 'data/eval_page_images/page_102.png']",1.0,1.0
+81,Mô tả thuật toán Prim (thuật toán người láng giềng gần nhất) tìm cây khung nhỏ nhất.,"Thuật toán Prim (thuật toán người láng giềng gần nhất) là một thuật toán tham lam để tìm cây khung nhỏ nhất (MST) của một đồ thị liên thông có trọng số. Thuật toán Prim hoạt động bằng cách xây dựng cây khung nhỏ nhất một cách dần dần, bắt đầu từ một đỉnh gốc và thêm các cạnh có trọng số nhỏ nhất vào cây khung cho đến khi tất cả các đỉnh đều được bao gồm trong cây khung.
+
+Thuật toán Prim được mô tả như sau:
+
+1. **Khởi tạo:** Chọn một đỉnh gốc s và thêm nó vào tập hợp đỉnh của cây khung. Khởi tạo tập hợp cạnh của cây khung là rỗng. Khởi tạo độ dài của cây khung là 0.
+2. **Lặp:** Lặp lại cho đến khi tất cả các đỉnh đều được bao gồm trong cây khung:
+    * Chọn cạnh có trọng số nhỏ nhất (e) trong tập hợp cạnh chưa được thêm vào cây khung, sao cho một đầu của cạnh đã được bao gồm trong cây khung và đầu kia chưa được bao gồm.
+    * Thêm cạnh e vào cây khung.
+    * Thêm đỉnh đầu kia của cạnh e vào tập hợp đỉnh của cây khung.
+    * Cập nhật độ dài của cây khung bằng cách cộng trọng số của cạnh e vào độ dài hiện tại của cây khung.
+3. **Trả lại kết quả:** Trả lại cây khung nhỏ nhất và độ dài của nó.
+
+Thuật toán Prim có độ phức tạp thời gian là O(E log V), trong đó E là số cạnh và V là số đỉnh của đồ thị. Thuật toán Prim hiệu quả hơn thuật toán Kruskal trong trường hợp đồ thị có số cạnh lớn.",3,"['data/eval_page_images/page_96.png', 'data/eval_page_images/page_101.png', 'data/eval_page_images/page_102.png']",1.0,1.0
+82,"Theo Bảng kiểm nghiệm thuật toán Prim trang 102 xuất phát từ đỉnh s=1, kết quả tập cạnh T và tổng độ dài D(T) là bao nhiêu?","Theo Bảng kiểm nghiệm thuật toán Prim trang 102, xuất phát từ đỉnh s=1, kết quả tập cạnh T là: T = {(1,3), (1,2), (1,4), (2,6), (2,7), (4,5), (5,10), (6,8), (6,9), (8,12), (8,13), (9,11)}. Tổng độ dài D(T) là: D(T) = 1 + 2 + 3 + 5 + 5 + 5 + 6 + 6 + 7 + 7 + 7 + 7 = 60.",3,"['data/eval_page_images/page_96.png', 'data/eval_page_images/page_101.png', 'data/eval_page_images/page_102.png']",1.0,1.0
+83,Phát biểu bài toán tìm đường đi ngắn nhất tổng quát và phân loại các trường hợp.,"Bài toán tìm đường đi ngắn nhất tổng quát là bài toán tìm đường đi ngắn nhất từ một đỉnh xuất phát s đến đỉnh đích t trên đồ thị G=<V, E>, trong đó V là tập đỉnh, E là tập cạnh. Mỗi cạnh (u, v) thuộc E được gán một trọng số A[u][v]. Độ dài của đường đi được tính bằng tổng trọng số của các cạnh trên đường đi. Bài toán có thể được phân loại thành hai trường hợp:
+
+1. **Trường hợp 1:**  s cố định và t thay đổi: Khi đó bài toán được phát biểu dưới dạng tìm đường đi ngắn nhất từ s đến tất cả các đỉnh còn lại trên đồ thị. Đối với đồ thị có trọng số không âm, bài toán luôn có lời giải bằng thuật toán Dijkstra. Đối với đồ thị có trọng số âm nhưng không tồn tại chu trình âm, bài toán có lời giải bằng thuật toán Bellman-Ford. Trong trường hợp đồ thị có chu trình âm, bài toán không có lời giải.
+
+2. **Trường hợp 2:** s thay đổi và t cũng thay đổi: Khi đó bài toán được phát biểu dưới dạng tìm đường đi ngắn nhất giữa tất cả các cặp đỉnh của đồ thị. Bài toán luôn có lời giải trên đồ thị không có chu trình âm. Đối với đồ thị có trọng số âm, bài toán được giải quyết bằng cách thực hiện lặp lại n lần thuật toán Dijkstra. Đối với đồ thị không có chu trình âm, bài toán có thể giải quyết bằng thuật toán Floyd.",3,"['data/eval_page_images/page_107.png', 'data/eval_page_images/page_117.png', 'data/eval_page_images/page_121.png']",1.0,1.0
+84,Thuật toán Dijkstra được áp dụng cho loại đồ thị nào và nguyên lý gán nhãn ra sao?,"Thuật toán Dijkstra được áp dụng cho đồ thị có trọng số không âm. Nguyên lý gán nhãn của thuật toán Dijkstra là: ban đầu, gán nhãn cho đỉnh nguồn là 0 và gán nhãn cho các đỉnh khác là vô cực. Sau đó, thuật toán sẽ lặp đi lặp lại, chọn đỉnh có nhãn nhỏ nhất trong tập đỉnh chưa được xử lý, sau đó cập nhật nhãn của các đỉnh kề với đỉnh được chọn. Cụ thể, nếu nhãn của đỉnh kề lớn hơn tổng của nhãn của đỉnh được chọn và trọng số của cạnh nối hai đỉnh, thì thuật toán sẽ cập nhật nhãn của đỉnh kề bằng tổng đó. Quá trình này sẽ được lặp lại cho đến khi tất cả các đỉnh đều được xử lý.",3,"['data/eval_page_images/page_107.png', 'data/eval_page_images/page_108.png', 'data/eval_page_images/page_109.png']",1.0,1.0
+85,Trình bày mã giả thuật toán Dijkstra(s).,"Thuật toán Dijkstra được áp dụng cho đồ thị có trọng số không âm. Nguyên lý gán nhãn của thuật toán Dijkstra là: ban đầu, gán nhãn cho đỉnh nguồn là 0 và gán nhãn cho các đỉnh khác là vô cực. Sau đó, thuật toán sẽ lặp đi lặp lại, chọn đỉnh có nhãn nhỏ nhất trong tập đỉnh chưa được xử lý, sau đó cập nhật nhãn của các đỉnh kề với đỉnh được chọn. Cụ thể, nếu nhãn của đỉnh kề lớn hơn tổng của nhãn của đỉnh được chọn và trọng số của cạnh nối hai đỉnh, thì thuật toán sẽ cập nhật nhãn của đỉnh kề bằng tổng đó. Quá trình này sẽ được lặp lại cho đến khi tất cả các đỉnh đều được xử lý.",3,"['data/eval_page_images/page_107.png', 'data/eval_page_images/page_108.png', 'data/eval_page_images/page_109.png']",1.0,1.0
+86,"Theo Bảng 6.1, đường đi ngắn nhất từ đỉnh 1 đến đỉnh 2, đỉnh 3, đỉnh 5 và độ dài tương ứng là bao nhiêu?","Theo Bảng 6.1, đường đi ngắn nhất từ đỉnh 1 đến đỉnh 2 là 2, đường đi là 1-2. Đường đi ngắn nhất từ đỉnh 1 đến đỉnh 3 là 4, đường đi là 1-2-3. Đường đi ngắn nhất từ đỉnh 1 đến đỉnh 5 là 10, đường đi là 1-2-3-10. Đường đi ngắn nhất từ đỉnh 1 đến đỉnh 5 là 8, đường đi là 1-2-3-7-6-5.",3,"['data/eval_page_images/page_107.png', 'data/eval_page_images/page_109.png', 'data/eval_page_images/page_110.png']",0.0,1.0
+87,"Theo kết quả trang 110, đường đi ngắn nhất từ đỉnh 1 đến đỉnh 10 và đỉnh 13 có độ dài và đường đi thế nào?","Theo Bảng 6.1, đường đi ngắn nhất từ đỉnh 1 đến đỉnh 2 là 2, đường đi là 1-2. Đường đi ngắn nhất từ đỉnh 1 đến đỉnh 3 là 4, đường đi là 1-2-3. Đường đi ngắn nhất từ đỉnh 1 đến đỉnh 5 là 10, đường đi là 1-2-3-10. Đường đi ngắn nhất từ đỉnh 1 đến đỉnh 5 là 8, đường đi là 1-2-3-7-6-5.",3,"['data/eval_page_images/page_107.png', 'data/eval_page_images/page_109.png', 'data/eval_page_images/page_110.png']",0.0,0.0
+88,Thuật toán Bellman-Ford dùng cho trường hợp nào và thực hiện bao nhiêu vòng lặp?,"Thuật toán Bellman-Ford được sử dụng để tìm đường đi ngắn nhất trên đồ thị không có chu trình âm. Trước khi thực hiện thuật toán, cần kiểm tra xem đồ thị có chu trình âm hay không. Trong trường hợp đồ thị có chu trình âm, bài toán sẽ không có lời giải. Thuật toán Bellman-Ford thực hiện n-2 vòng lặp, trong đó n là số đỉnh của đồ thị.",3,"['data/eval_page_images/page_112.png', 'data/eval_page_images/page_113.png', 'data/eval_page_images/page_115.png']",1.0,1.0
+89,Mô tả bước lặp trong thuật toán Bellman-Ford(s).,"Thuật toán Bellman-Ford được sử dụng để tìm đường đi ngắn nhất trên đồ thị không có chu trình âm. Trước khi thực hiện thuật toán, cần kiểm tra xem đồ thị có chu trình âm hay không. Trong trường hợp đồ thị có chu trình âm, bài toán sẽ không có lời giải. Thuật toán Bellman-Ford thực hiện n-2 vòng lặp, trong đó n là số đỉnh của đồ thị.",3,"['data/eval_page_images/page_112.png', 'data/eval_page_images/page_113.png', 'data/eval_page_images/page_115.png']",1.0,1.0
+90,"Trong ví dụ ma trận trọng số trang 113, tại sao đồ thị này không thể giải bằng thuật toán Dijkstra mà phải dùng Bellman-Ford?","Thuật toán Dijkstra chỉ có thể giải quyết bài toán tìm đường đi ngắn nhất trên đồ thị có trọng số không âm. Trong ví dụ ma trận trọng số trang 113, đồ thị có chứa cạnh có trọng số âm. Do đó, thuật toán Dijkstra không thể áp dụng để giải quyết bài toán này. Thay vào đó, thuật toán Bellman-Ford được sử dụng. Thuật toán Bellman-Ford có thể xử lý cả đồ thị có trọng số âm và đồ thị có chu trình âm.",3,"['data/eval_page_images/page_107.png', 'data/eval_page_images/page_112.png', 'data/eval_page_images/page_113.png']",1.0,1.0
+91,"Theo Bảng 6.2, kết quả khoảng cách ngắn nhất D và đỉnh trước Truoc từ đỉnh 1 đến các đỉnh 2, 3, 4, 5 theo Bellman-Ford là bao nhiêu?","Theo Bảng 6.2, kết quả khoảng cách ngắn nhất D và đỉnh trước Truoc từ đỉnh 1 đến các đỉnh 2, 3, 4, 5 theo Bellman-Ford là:
+
+- Đỉnh 2: D[2] = 1, Truoc[2] = 1
+- Đỉnh 3: D[3] = 4, Truoc[3] = 2
+- Đỉnh 4: D[4] = 4, Truoc[4] = 2
+- Đỉnh 5: D[5] = -1, Truoc[5] = 3",3,"['data/eval_page_images/page_112.png', 'data/eval_page_images/page_113.png', 'data/eval_page_images/page_115.png']",1.0,1.0
+92,Thuật toán Floyd giải quyết bài toán gì và có độ phức tạp là bao nhiêu?,"Thuật toán Floyd giải quyết bài toán tìm đường đi ngắn nhất giữa tất cả các cặp đỉnh của đồ thị. Độ phức tạp của thuật toán Floyd là O(n^3), trong đó n là số đỉnh của đồ thị.",3,"['data/eval_page_images/page_32.png', 'data/eval_page_images/page_107.png', 'data/eval_page_images/page_117.png']",1.0,1.0
+93,Trình bày các bước và công thức cập nhật cốt lõi của thuật toán Floyd.,"Thuật toán Floyd là một thuật toán tìm đường đi ngắn nhất giữa tất cả các cặp đỉnh trong một đồ thị. Thuật toán này được sử dụng để giải quyết bài toán tìm đường đi ngắn nhất trong đồ thị có trọng số, tức là đồ thị có trọng số cho mỗi cạnh. Thuật toán Floyd hoạt động bằng cách lặp qua tất cả các đỉnh trong đồ thị và kiểm tra xem có đường đi ngắn hơn giữa hai đỉnh nào đó thông qua đỉnh trung gian hay không. Nếu có, thuật toán sẽ cập nhật đường đi ngắn nhất. Thuật toán Floyd có độ phức tạp thời gian là O(n^3), trong đó n là số đỉnh trong đồ thị. Thuật toán Floyd được sử dụng rộng rãi trong các ứng dụng như tìm đường đi ngắn nhất trong mạng lưới giao thông, tìm đường đi ngắn nhất trong mạng máy tính, v.v.",3,"['data/eval_page_images/page_2.png', 'data/eval_page_images/page_107.png', 'data/eval_page_images/page_117.png']",1.0,1.0
+94,"Trong cài đặt thuật toán Floyd trang 118-119, mảng D[i][j] và mảng S[i][j] lưu trữ thông tin gì?","Trong cài đặt thuật toán Floyd, mảng D[i][j] và mảng S[i][j] được sử dụng để lưu trữ thông tin về khoảng cách ngắn nhất giữa các đỉnh trong đồ thị. Cụ thể:
+
+* **Mảng D[i][j]:** Lưu trữ khoảng cách ngắn nhất từ đỉnh i đến đỉnh j. Nếu không có đường đi nào từ i đến j, giá trị của D[i][j] sẽ là vô cực (MAX).
+* **Mảng S[i][j]:** Lưu trữ đỉnh trung gian trên đường đi ngắn nhất từ i đến j. Nếu không có đường đi nào từ i đến j, giá trị của S[i][j] sẽ là 0.",3,"['data/eval_page_images/page_43.png', 'data/eval_page_images/page_118.png', 'data/eval_page_images/page_119.png']",1.0,1.0
+95,"Trong bài tập 2 trang 121-122 về hành trình bay, khoảng cách ngắn nhất từ New_York đến Los_Angeles là bao nhiêu và đi qua các điểm nào?","Khoảng cách ngắn nhất từ New_York đến Los_Angeles là 2600, đi qua các điểm: New_York -> Toronto -> Los_Angeles.",3,"['data/eval_page_images/page_107.png', 'data/eval_page_images/page_121.png', 'data/eval_page_images/page_122.png']",0.0,1.0
+96,"Trong trò chơi Rubik phẳng ô vuông thần bí (Bài tập 3 trang 122), 3 phép biến đổi cơ bản A, B, C thực hiện như thế nào?","Trong trò chơi Rubik phẳng ô vuông thần bí, 3 phép biến đổi cơ bản A, B, C được thực hiện như sau:
+
+- **Phép biến đổi A**: Đổi chỗ dòng trên xuống dòng dưới. Ví dụ, sau khi thực hiện phép biến đổi A, hình 1 sẽ trở thành hình 2.
+- **Phép biến đổi B**: Thực hiện một phép hoán vị vòng quanh từ trái sang phải trên từng dòng. Ví dụ, sau khi thực hiện phép biến đổi B, hình 1 sẽ trở thành hình 3.
+- **Phép biến đổi C**: Quay theo chiều kim đồng hồ bốn ô ở giữa. Ví dụ, sau khi thực hiện phép biến đổi C, hình 1 sẽ trở thành hình 4.",3,"['data/eval_page_images/page_28.png', 'data/eval_page_images/page_122.png', 'data/eval_page_images/page_123.png']",1.0,1.0
+97,"Với trạng thái đích '2 6 8 4 5 7 3 1' trong bài tập 3 trang 123, số phép biến đổi ít nhất là bao nhiêu và gồm dãy phép biến đổi nào?","Để giải quyết bài toán này, chúng ta cần tìm dãy phép biến đổi ngắn nhất để đưa trạng thái ban đầu '2 6 8 4 5 7 3 1' về trạng thái đích '2 6 8 4 5 7 3 1'. 
+
+Bài toán này liên quan đến việc tìm đường đi ngắn nhất trong đồ thị, trong đó mỗi đỉnh đại diện cho một trạng thái của bảng Rubik, và mỗi cạnh đại diện cho một phép biến đổi. 
+
+Chúng ta có thể sử dụng thuật toán tìm kiếm theo chiều rộng (BFS) để giải quyết bài toán này. Thuật toán BFS sẽ duyệt qua tất cả các đỉnh trong đồ thị theo thứ tự độ sâu tăng dần, đảm bảo rằng chúng ta sẽ tìm được đường đi ngắn nhất từ đỉnh nguồn đến đỉnh đích.
+
+Số phép biến đổi ít nhất để đưa trạng thái ban đầu về trạng thái đích là 7, và dãy phép biến đổi là: B, C, A, B, C, C, B.",3,"['data/eval_page_images/page_27.png', 'data/eval_page_images/page_122.png', 'data/eval_page_images/page_123.png']",1.0,1.0
+98,Bài toán 5 trang 123 yêu cầu loại bỏ các đường truyền tin để giảm chi phí mà vẫn đảm bảo tính liên thông tương đương với bài toán nào trong lý thuyết đồ thị?,Bài toán 5 trang 123 yêu cầu loại bỏ các đường truyền tin để giảm chi phí mà vẫn đảm bảo tính liên thông tương đương với bài toán tìm cây khung nhỏ nhất trong lý thuyết đồ thị. Bài toán này liên quan đến việc tìm tập hợp các cạnh nhỏ nhất trong đồ thị sao cho tất cả các đỉnh đều được kết nối với nhau. Thuật toán Kruskal được sử dụng để giải quyết bài toán này.,3,"['data/eval_page_images/page_96.png', 'data/eval_page_images/page_123.png', 'data/eval_page_images/page_124.png']",1.0,1.0
+99,"Trong bài tập 5 trang 124, tại sao ma trận trọng số có thể áp dụng thuật toán Dijkstra?","Ma trận trọng số có thể áp dụng thuật toán Dijkstra vì thuật toán này được thiết kế để tìm đường đi ngắn nhất trong đồ thị có trọng số không âm. Ma trận trọng số cung cấp thông tin về trọng số của các cạnh trong đồ thị, cho phép thuật toán Dijkstra xác định đường đi ngắn nhất giữa hai đỉnh bất kỳ. Thuật toán Dijkstra hoạt động bằng cách lặp đi lặp lại, chọn đỉnh có khoảng cách ngắn nhất từ đỉnh nguồn và cập nhật khoảng cách đến các đỉnh kề với đỉnh đó. Quá trình này được lặp lại cho đến khi tất cả các đỉnh đều được thăm dò.",3,"['data/eval_page_images/page_107.png', 'data/eval_page_images/page_108.png', 'data/eval_page_images/page_124.png']",1.0,1.0
+100,"Trong bài tập 6d trang 125, tại sao bài toán tìm đường đi ngắn nhất phải dùng thuật toán Bellman-Ford thay vì Dijkstra?","Bài toán tìm đường đi ngắn nhất trong bài tập 6d trang 125 yêu cầu tìm đường đi ngắn nhất giữa tất cả các cặp đỉnh của đồ thị. Điều này có nghĩa là đỉnh nguồn và đỉnh đích có thể thay đổi. Thuật toán Dijkstra chỉ có thể tìm đường đi ngắn nhất từ một đỉnh nguồn cố định đến tất cả các đỉnh còn lại. Do đó, thuật toán Bellman-Ford được sử dụng để giải quyết bài toán này. Thuật toán Bellman-Ford có thể xử lý cả trường hợp đồ thị có chu trình âm, trong khi thuật toán Dijkstra không thể.",3,"['data/eval_page_images/page_107.png', 'data/eval_page_images/page_108.png', 'data/eval_page_images/page_112.png']",1.0,1.0
+

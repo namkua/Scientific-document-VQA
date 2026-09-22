@@ -1,0 +1,39 @@
+replicaCount: 1
+
+image:
+  repository: vqa-frontend
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "latest"
+
+service:
+  type: ClusterIP
+  port: 8501
+
+ingress:
+  enabled: true
+  className: "nginx"
+  annotations:
+    nginx.org/websocket-services: "frontend"
+    nginx.org/proxy-read-timeout: "3600"
+    nginx.org/proxy-send-timeout: "3600"
+    nginx.org/proxy-connect-timeout: "3600"
+    nginx.org/proxy-buffering: "False"
+    nginx.org/client-max-body-size: "50m"
+  hosts:
+    - host: "127.0.0.1.nip.io"
+      paths:
+        - path: /
+          pathType: Prefix
+
+env:
+  # The API URL accessed by the frontend container internally
+  apiUrl: "http://backend:8000/api/v1"
+
+resources:
+  limits:
+    cpu: 250m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
